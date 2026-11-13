@@ -1,0 +1,113 @@
+2026-11-13 23:34:24.556 INFO   Freerouting v2.5.0 (build-date: 2026-10-05)
+2026-11-13 23:34:24.886 INFO   Hardware: 8 CPU cores, 362 CPU score, 12216 MB RAM
+2026-11-13 23:34:24.889 WARN   GUI is disabled and you don't have a console available, so the only feedback from Freerouting is in the log.
+2026-11-13 23:34:26.253 INFO   [67CA7F\4F7E20] Loading board file 'v8_fr.dsn'...
+2026-11-13 23:34:27.700 WARN   DSN file 'v8_fr.dsn' was loaded with 1 warning(s).
+2026-11-13 23:34:27.781 INFO   [67CA7F\4F7E20] Job '67CA7F\4F7E20' started at 2026-11-13T21:34:27.780623Z.
+2026-11-13 23:34:28.888 WARN   Design Warning: Board has 850 pre-existing clearance violation(s) in the loaded design (before routing):
+  - 697 unfixable violation(s) (cannot be resolved by Freerouting):
+      * 697 fixed trace/via clearance violations (first 5 shown):
+          - FixedVia#5627 [net CH_P16] <-> u1.0fc8922007197547 [net CH_P16]
+          - FixedVia#5627 [net CH_P16] <-> u1.0fc8922007197547 [net CH_P16]
+          - FixedVia#5627 [net CH_P16] <-> u1.0fc8922007197547 [net CH_P16]
+          - FixedVia#5627 [net CH_P16] <-> u1.0fc8922007197547 [net CH_P16]
+          - FixedVia#5626 [net CH_P16] <-> u1.5542aa4a1bf56af [net CH_P16]
+          ... and 692 more
+  - 153 potentially fixable violation(s) (involving unfixed traces/vias, first 5 shown):
+      - Via#5560 [net OSC_TB] <-> u1.8a7d1909dda659a [net OSC_TB]
+      - Via#5560 [net OSC_TB] <-> u1.8a7d1909dda659a [net OSC_TB]
+      - Via#5560 [net OSC_TB] <-> u1.8a7d1909dda659a [net OSC_TB]
+      - Via#5560 [net OSC_TB] <-> u1.8a7d1909dda659a [net OSC_TB]
+      - Via#5554 [net METER_H] <-> u1.639a8868173541a [net METER_H]
+      ... and 148 more
+Notice: Freerouting does not modify component placement, board outlines, or fixed items.
+Resolving these 697 unfixable violation(s) is the responsibility of the board author in their EDA tool (e.g. KiCad).
+2026-11-13 23:34:29.049 INFO   [67CA7F\4F7E20] Pipeline thread limits: autorouter pass is single-threaded, optimizer.max_threads=7.
+2026-11-13 23:34:29.575 INFO   [67CA7F\4F7E20] Fanout stage is enabled but skipped because the board has no SMD pins.
+2026-11-13 23:34:30.527 INFO   [67CA7F\4F7E20] Auto-routing stage started on board '6c16e747757040a4ee73c5424998cca3' with baseline score 896.10 for 93 unrouted items.
+2026-11-13 23:35:16.401 WARN   BasicBoard.normalizeTraces: reached 2000 iterations for net 'IN_C' — stopping to prevent hang. The board geometry for this net may be oscillating (split/combine cycle); traces are kept as-is and further normalization for this net is suppressed on this board candidate.
+2026-11-13 23:36:15.405 INFO   [67CA7F\4F7E20] Auto-routing pass #1 on board '6c16e747757040a4ee73c5424998cca3' was completed in 104.18 seconds with score 966.17 (27 unrouted and 849 violations), using 103.03 CPU seconds and the job allocated 38.86 GB of memory so far.
+2026-11-13 23:37:20.910 WARN   BasicBoard.normalizeTraces: reached 2000 iterations for net 'CH_P16' — stopping to prevent hang. The board geometry for this net may be oscillating (split/combine cycle); traces are kept as-is and further normalization for this net is suppressed on this board candidate.
+2026-11-13 23:37:22.579 INFO   [67CA7F\4F7E20] Auto-routing pass #2 on board '8d239fe049f3a31b90532f2045e733c6' was completed in 66.66 seconds with score 972.56 (21 unrouted and 845 violations), using 168.86 CPU seconds and the job allocated 70.57 GB of memory so far.
+2026-11-13 23:37:43.271 INFO   [67CA7F\4F7E20] Auto-routing pass #3 on board '9b60e9cef4ae313b9650e40b495bcbf1' was completed in 20.22 seconds with score 970.44 (23 unrouted and 845 violations), using 189.36 CPU seconds and the job allocated 79.12 GB of memory so far.
+2026-11-13 23:37:52.324 WARN   border_intersections: intersection_count (2) is too big!
+2026-11-13 23:38:08.080 INFO   [67CA7F\4F7E20] Auto-routing pass #4 on board '53e48ac40831aba475b8fdebe7f60b0d' was completed in 24.34 seconds with score 973.62 (20 unrouted and 845 violations), using 212.97 CPU seconds and the job allocated 89.66 GB of memory so far.
+2026-11-13 23:38:16.451 WARN   border_intersections: intersection_count (2) is too big!
+2026-11-13 23:38:32.951 INFO   [67CA7F\4F7E20] Auto-routing pass #5 on board '2c5dcf63b7a1b96e39a4d5a87f950072' was completed in 24.14 seconds with score 973.62 (20 unrouted and 845 violations), using 237.59 CPU seconds and the job allocated 100.91 GB of memory so far.
+2026-11-13 23:38:40.486 WARN   border_intersections: intersection_count (2) is too big!
+2026-11-13 23:38:58.845 INFO   [67CA7F\4F7E20] Auto-routing pass #6 on board '08e5c257fbc2685a15b0ad8346bb9157' was completed in 25.41 seconds with score 974.68 (19 unrouted and 845 violations), using 263.30 CPU seconds and the job allocated 113.68 GB of memory so far.
+2026-11-13 23:39:15.152 INFO   [67CA7F\4F7E20] Auto-routing pass #7 on board 'a2fb4526f558a01fa7038bb4f734cef1' was completed in 15.84 seconds with score 974.68 (19 unrouted and 845 violations), using 279.17 CPU seconds and the job allocated 120.43 GB of memory so far.
+2026-11-13 23:39:33.529 INFO   [67CA7F\4F7E20] Auto-routing pass #8 on board 'f6155f861b8aeb2313852573edf740ba' was completed in 17.89 seconds with score 974.68 (19 unrouted and 845 violations), using 298.02 CPU seconds and the job allocated 129.07 GB of memory so far.
+2026-11-13 23:39:46.115 WARN   border_intersections: intersection_count (2) is too big!
+2026-11-13 23:39:56.549 INFO   [67CA7F\4F7E20] Auto-routing pass #9 on board '7f2a030c14fd908db61a3e6dca09d4b2' was completed in 22.55 seconds with score 973.62 (20 unrouted and 845 violations), using 320.83 CPU seconds and the job allocated 140.60 GB of memory so far.
+2026-11-13 23:40:08.092 WARN   border_intersections: intersection_count (2) is too big!
+2026-11-13 23:40:18.546 INFO   [67CA7F\4F7E20] Auto-routing pass #10 on board '2e6d0801f60a2d89c0a8f9165b66dd04' was completed in 21.51 seconds with score 971.50 (22 unrouted and 845 violations), using 342.50 CPU seconds and the job allocated 150.55 GB of memory so far.
+2026-11-13 23:40:28.964 WARN   border_intersections: intersection_count (2) is too big!
+2026-11-13 23:40:40.923 WARN   border_intersections: intersection_count (2) is too big!
+2026-11-13 23:40:45.964 INFO   [67CA7F\4F7E20] Auto-routing pass #11 on board '654e5ce6de04ae825df22fe560bccf42' was completed in 26.93 seconds with score 974.68 (19 unrouted and 845 violations), using 368.97 CPU seconds and the job allocated 163.16 GB of memory so far.
+2026-11-13 23:40:54.426 WARN   border_intersections: intersection_count (2) is too big!
+2026-11-13 23:41:07.343 INFO   [67CA7F\4F7E20] Auto-routing pass #12 on board 'a2fb4526f558a01fa7038bb4f734cef1' was completed in 0.00 seconds with score 974.68 (19 unrouted and 845 violations), using 390.66 CPU seconds and the job allocated 173.06 GB of memory so far.
+2026-11-13 23:41:14.692 WARN   border_intersections: intersection_count (2) is too big!
+2026-11-13 23:42:04.703 WARN   BasicBoard.normalizeTraces: reached 2000 iterations for net 'CH_P16' — stopping to prevent hang. The board geometry for this net may be oscillating (split/combine cycle); traces are kept as-is and further normalization for this net is suppressed on this board candidate.
+2026-11-13 23:42:06.078 INFO   [67CA7F\4F7E20] Auto-routing pass #13 on board 'a2fb4526f558a01fa7038bb4f734cef1' was completed in 58.62 seconds with score 974.68 (19 unrouted and 845 violations), using 447.69 CPU seconds and the job allocated 205.61 GB of memory so far.
+2026-11-13 23:42:14.111 WARN   border_intersections: intersection_count (2) is too big!
+2026-11-13 23:42:24.586 INFO   [67CA7F\4F7E20] Auto-routing pass #14 on board 'bb2627fef07a44960a9dc40fa2b45cae' was completed in 18.06 seconds with score 974.68 (19 unrouted and 845 violations), using 466.48 CPU seconds and the job allocated 215.57 GB of memory so far.
+2026-11-13 23:42:39.894 INFO   [67CA7F\4F7E20] Auto-routing pass #15 on board 'ed4c2807b7b304913e6c8e442bb6775a' was completed in 14.89 seconds with score 975.74 (18 unrouted and 845 violations), using 481.34 CPU seconds and the job allocated 222.50 GB of memory so far.
+2026-11-13 23:42:52.225 INFO   [67CA7F\4F7E20] Auto-routing pass #16 on board 'a46ccc5b32d1492c8aa6b1535c18938a' was completed in 11.91 seconds with score 975.74 (18 unrouted and 845 violations), using 493.28 CPU seconds and the job allocated 227.98 GB of memory so far.
+2026-11-13 23:43:04.819 INFO   [67CA7F\4F7E20] Auto-routing pass #17 on board 'c6ab98b99eae3db2e95af8c680733d66' was completed in 12.04 seconds with score 975.74 (18 unrouted and 845 violations), using 506.14 CPU seconds and the job allocated 233.90 GB of memory so far.
+2026-11-13 23:43:35.718 WARN   BasicBoard.normalizeTraces: reached 2000 iterations for net 'IN_C' — stopping to prevent hang. The board geometry for this net may be oscillating (split/combine cycle); traces are kept as-is and further normalization for this net is suppressed on this board candidate.
+2026-11-13 23:43:47.045 INFO   [67CA7F\4F7E20] Auto-routing pass #18 on board '32b595b0f63f3bdcede3607e589e6cd3' was completed in 41.80 seconds with score 976.81 (17 unrouted and 845 violations), using 547.70 CPU seconds and the job allocated 257.40 GB of memory so far.
+2026-11-13 23:44:00.327 INFO   [67CA7F\4F7E20] Auto-routing pass #19 on board 'ec0333510a10ca40a38cc393aed0406c' was completed in 12.85 seconds with score 976.81 (17 unrouted and 845 violations), using 560.33 CPU seconds and the job allocated 263.15 GB of memory so far.
+2026-11-13 23:44:12.976 INFO   [67CA7F\4F7E20] Auto-routing pass #20 on board '498e9e86bd3c94a6822f50924c44510b' was completed in 12.23 seconds with score 976.81 (17 unrouted and 845 violations), using 573.19 CPU seconds and the job allocated 268.90 GB of memory so far.
+2026-11-13 23:44:24.824 INFO   [67CA7F\4F7E20] Auto-routing pass #21 on board '17020039ffd1a1e955d5027778129807' was completed in 11.43 seconds with score 976.81 (17 unrouted and 845 violations), using 585.16 CPU seconds and the job allocated 274.49 GB of memory so far.
+2026-11-13 23:44:37.814 INFO   [67CA7F\4F7E20] Auto-routing pass #22 on board '443dcd33df8a929c9341e74779d0fb96' was completed in 12.59 seconds with score 976.81 (17 unrouted and 845 violations), using 597.80 CPU seconds and the job allocated 280.19 GB of memory so far.
+2026-11-13 23:44:50.124 INFO   [67CA7F\4F7E20] Auto-routing pass #23 on board '4d5136a7157d28687538fa301df9c539' was completed in 11.86 seconds with score 976.81 (17 unrouted and 845 violations), using 609.75 CPU seconds and the job allocated 285.77 GB of memory so far.
+2026-11-13 23:45:02.095 INFO   [67CA7F\4F7E20] Auto-routing pass #24 on board '0a570784176b81b6c28b8c7ceef9fb16' was completed in 11.58 seconds with score 976.81 (17 unrouted and 845 violations), using 621.64 CPU seconds and the job allocated 291.41 GB of memory so far.
+2026-11-13 23:45:14.814 INFO   [67CA7F\4F7E20] Auto-routing pass #25 on board 'beddc64b3283920a8e101953a3bfe61f' was completed in 12.33 seconds with score 976.81 (17 unrouted and 845 violations), using 634.48 CPU seconds and the job allocated 297.39 GB of memory so far.
+2026-11-13 23:45:27.205 INFO   [67CA7F\4F7E20] Auto-routing pass #26 on board '393c85fc30081e6be5fcd0cdae2010a8' was completed in 11.98 seconds with score 976.81 (17 unrouted and 845 violations), using 646.42 CPU seconds and the job allocated 303.04 GB of memory so far.
+2026-11-13 23:45:39.927 INFO   [67CA7F\4F7E20] Auto-routing pass #27 on board '313302aefc46c6643398ce4cd5736d7f' was completed in 12.33 seconds with score 976.81 (17 unrouted and 845 violations), using 659.11 CPU seconds and the job allocated 308.91 GB of memory so far.
+2026-11-13 23:45:52.161 INFO   [67CA7F\4F7E20] Auto-routing pass #28 on board '691b2935ae863414e16b9a1830827a52' was completed in 11.82 seconds with score 976.81 (17 unrouted and 845 violations), using 671.02 CPU seconds and the job allocated 314.38 GB of memory so far.
+2026-11-13 23:45:52.343 INFO   [67CA7F\4F7E20] The router's score (976.81) has not improved by more than 0.5 points in the last 10 passes (17 items still unconnected). Stopping the auto-router.
+The following connections could not be routed -- please review your design (e.g. check pad clearances, trace width rules, and available routing space):
+  Net 'VL' (2 unrouted connections):
+    - u1-d18714b6c6c415fd12  ->  u1-f800b59a680722ee11
+    - u1-df0d897a10362b7e18  ->  u1-4cb1b705fbbc0dbd15
+  Net 'N17A' (1 unrouted connection):
+    - u1-3872f16c9c50b78e13  ->  u1-466329065198543513
+  Net 'VSEN_VL' (3 unrouted connections):
+    - u1-1ad26ca6c7dcd0ee17  ->  u1-d57d02606d25154512
+    - via  ->  u1-1ad26ca6c7dcd0ee17
+    - u1-bccb7c71a6db683e49  ->  via
+  Net 'L_PS' (1 unrouted connection):
+    - u1-2b7b9d64ccf97aa  ->  u1-bdd8679db49684b511
+  Net 'AUX2' (2 unrouted connections):
+    - u1-19a7791abd0f925c  ->  u1-6f3518950557dcd459
+    - u1-19a7791abd0f925c  ->  u1-96dd3d7cc47273d2256
+  Net 'GEN_H' (1 unrouted connection):
+    - u1-53549d757fdfaf5e11  ->  u1-f68fc8774178342c11
+  Net 'DRV_A_MTK' (1 unrouted connection):
+    - via  ->  via
+  Net 'B2_C' (1 unrouted connection):
+    - u1-f4bf79fe215850a  ->  u1-251bd8819c16ea8e34
+  Net 'DRV_B_INS' (1 unrouted connection):
+    - via  ->  u1-251bd8819c16ea8e32
+  Net 'MA3' (2 unrouted connections):
+    - u1-7bf266574129d681  ->  u1-6f3518950557dcd477
+    - u1-7bf266574129d681  ->  via
+  Net 'IN_C' (1 unrouted connection):
+    - u1-64a96479b5b8e19  ->  u1-1fbbdda261c90a8
+  Net 'CH_P16' (1 unrouted connection):
+    - via  ->  via
+2026-11-13 23:45:53.121 INFO   [67CA7F\4F7E20] Auto-routing stage completed: started with 93 unrouted nets, completed in 683.80 seconds, final score: 976.81 (17 unrouted and 845 violations), using 672.00 total CPU seconds, 314.88 GB total allocated, and 1014.8 MB peak heap usage.
+2026-11-13 23:45:53.414 INFO   [67CA7F\4F7E20] Skipping optimization stage: the board has 17 unrouted connection(s) (optimizer only runs on completely routed boards).
+2026-11-13 23:45:53.629 INFO   [67CA7F\4F7E20] Job '67CA7F\4F7E20' finished with state: COMPLETED (elapsed: 11 minutes 25.85 seconds, finished at UTC: 2026-11-13T21:45:53.628168500Z).
+2026-11-13 23:45:53.638 INFO   Saving output file 'C:\Users\theli\Documents\EasyEDA-Pro\projects\VR Channel Bench\pcb\v8_fr.ses' (SES)...
+2026-11-13 23:45:53.643 INFO   Successfully saved output file 'C:\Users\theli\Documents\EasyEDA-Pro\projects\VR Channel Bench\pcb\v8_fr.ses' (520777 bytes).
+
+????????????????????????????????????????????????????????????????????
+?           Thank you for using Freerouting!                       ?
+?                                                                  ?
+?  If you would like to support the project, please visit          ?
+?  https://www.freerouting.app/donate.html                         ?
+?  Every contribution helps keep this project open and active!     ?
+????????????????????????????????????????????????????????????????????

@@ -1,0 +1,137 @@
+2026-11-13 22:47:21.771 INFO   Freerouting v2.5.0 (build-date: 2026-10-05)
+2026-11-13 22:47:22.096 INFO   Hardware: 8 CPU cores, 378 CPU score, 12216 MB RAM
+2026-11-13 22:47:22.099 WARN   GUI is disabled and you don't have a console available, so the only feedback from Freerouting is in the log.
+2026-11-13 22:47:23.452 INFO   [5B3FA1\6FD273] Loading board file 'v6_fr.dsn'...
+2026-11-13 22:47:24.613 INFO   [5B3FA1\6FD273] Job '5B3FA1\6FD273' started at 2026-11-13T20:47:24.613802300Z.
+2026-11-13 22:47:25.450 WARN   Design Warning: Board has 849 pre-existing clearance violation(s) in the loaded design (before routing):
+  - 849 unfixable violation(s) (cannot be resolved by Freerouting):
+      * 849 fixed trace/via clearance violations (first 5 shown):
+          - FixedVia#5595 [net CH_P16] <-> u1.0fc8922007197547 [net CH_P16]
+          - FixedVia#5595 [net CH_P16] <-> u1.0fc8922007197547 [net CH_P16]
+          - FixedVia#5595 [net CH_P16] <-> u1.0fc8922007197547 [net CH_P16]
+          - FixedVia#5595 [net CH_P16] <-> u1.0fc8922007197547 [net CH_P16]
+          - FixedVia#5594 [net CH_P16] <-> u1.5542aa4a1bf56af [net CH_P16]
+          ... and 844 more
+  - 0 potentially fixable violations
+Notice: Freerouting does not modify component placement, board outlines, or fixed items.
+Resolving these 849 unfixable violation(s) is the responsibility of the board author in their EDA tool (e.g. KiCad).
+2026-11-13 22:47:25.563 INFO   [5B3FA1\6FD273] Pipeline thread limits: autorouter pass is single-threaded, optimizer.max_threads=7.
+2026-11-13 22:47:26.067 INFO   [5B3FA1\6FD273] Fanout stage is enabled but skipped because the board has no SMD pins.
+2026-11-13 22:47:27.012 INFO   [5B3FA1\6FD273] Auto-routing stage started on board '37c48f865d508d3f8eeeaacf65391583' with baseline score 890.79 for 98 unrouted items.
+2026-11-13 22:48:09.079 WARN   BasicBoard.normalizeTraces: reached 2000 iterations for net 'IN_C' — stopping to prevent hang. The board geometry for this net may be oscillating (split/combine cycle); traces are kept as-is and further normalization for this net is suppressed on this board candidate.
+2026-11-13 22:48:51.853 WARN   Simplex.calc_division_lines: division not found
+2026-11-13 22:48:51.853 WARN   Simplex.cutout_from: division line is null
+2026-11-13 22:49:10.397 WARN   border_intersections: intersection_count (2) is too big!
+2026-11-13 22:49:13.783 INFO   [5B3FA1\6FD273] Auto-routing pass #1 on board '37c48f865d508d3f8eeeaacf65391583' was completed in 105.97 seconds with score 955.55 (37 unrouted and 849 violations), using 106.00 CPU seconds and the job allocated 41.04 GB of memory so far.
+2026-11-13 22:49:31.098 WARN   border_intersections: intersection_count (2) is too big!
+2026-11-13 22:49:49.242 WARN   BasicBoard.normalizeTraces: reached 2000 iterations for net 'CH_A0' — stopping to prevent hang. The board geometry for this net may be oscillating (split/combine cycle); traces are kept as-is and further normalization for this net is suppressed on this board candidate.
+2026-11-13 22:50:43.707 WARN   BasicBoard.normalizeTraces: reached 2000 iterations for net 'CH_P16' — stopping to prevent hang. The board geometry for this net may be oscillating (split/combine cycle); traces are kept as-is and further normalization for this net is suppressed on this board candidate.
+2026-11-13 22:50:45.208 INFO   [5B3FA1\6FD273] Auto-routing pass #2 on board 'd1adb972b830b36415bfc3abb5a634fa' was completed in 90.95 seconds with score 960.86 (32 unrouted and 849 violations), using 196.23 CPU seconds and the job allocated 82.55 GB of memory so far.
+2026-11-13 22:50:57.202 WARN   border_intersections: intersection_count (2) is too big!
+2026-11-13 22:51:14.438 INFO   [5B3FA1\6FD273] Auto-routing pass #3 on board '466a906ca7fd75e1ea2907cb941afba6' was completed in 28.76 seconds with score 959.80 (33 unrouted and 849 violations), using 224.83 CPU seconds and the job allocated 94.21 GB of memory so far.
+2026-11-13 22:51:21.164 WARN   border_intersections: intersection_count (2) is too big!
+2026-11-13 22:51:29.820 WARN   border_intersections: intersection_count (2) is too big!
+2026-11-13 22:51:35.604 WARN   border_intersections: intersection_count (2) is too big!
+2026-11-13 22:51:40.991 WARN   border_intersections: intersection_count (2) is too big!
+2026-11-13 22:51:52.125 INFO   [5B3FA1\6FD273] Auto-routing pass #4 on board '6ce7a43fd71e2f961e7df92778b32518' was completed in 37.23 seconds with score 960.86 (32 unrouted and 849 violations), using 262.28 CPU seconds and the job allocated 111.09 GB of memory so far.
+2026-11-13 22:52:01.786 WARN   border_intersections: intersection_count (2) is too big!
+2026-11-13 22:52:22.219 INFO   [5B3FA1\6FD273] Auto-routing pass #5 on board '7fc019c75cc1d344799f90c561cbb17e' was completed in 29.63 seconds with score 965.10 (28 unrouted and 849 violations), using 291.91 CPU seconds and the job allocated 123.47 GB of memory so far.
+2026-11-13 22:52:33.567 WARN   border_intersections: intersection_count (2) is too big!
+2026-11-13 22:52:54.465 INFO   [5B3FA1\6FD273] Auto-routing pass #6 on board '2ec9452860b63dcb3f436ff40b932207' was completed in 31.77 seconds with score 964.04 (29 unrouted and 849 violations), using 323.59 CPU seconds and the job allocated 137.83 GB of memory so far.
+2026-11-13 22:53:02.656 WARN   border_intersections: intersection_count (2) is too big!
+2026-11-13 22:53:13.327 WARN   border_intersections: intersection_count (2) is too big!
+2026-11-13 22:53:28.946 INFO   [5B3FA1\6FD273] Auto-routing pass #7 on board '649e30de8f3c1c39e8e8a60f26820988' was completed in 34.02 seconds with score 965.10 (28 unrouted and 849 violations), using 357.14 CPU seconds and the job allocated 153.35 GB of memory so far.
+2026-11-13 22:53:36.839 WARN   border_intersections: intersection_count (2) is too big!
+2026-11-13 22:53:43.438 WARN   border_intersections: intersection_count (2) is too big!
+2026-11-13 22:53:48.482 WARN   border_intersections: intersection_count (2) is too big!
+2026-11-13 22:54:03.328 INFO   [5B3FA1\6FD273] Auto-routing pass #8 on board 'f596072de665133cfe0d1f47b670d621' was completed in 33.86 seconds with score 966.17 (27 unrouted and 849 violations), using 391.66 CPU seconds and the job allocated 169.19 GB of memory so far.
+2026-11-13 22:54:16.992 WARN   border_intersections: intersection_count (2) is too big!
+2026-11-13 22:54:27.587 INFO   [5B3FA1\6FD273] Auto-routing pass #9 on board 'dc89a0beb41a742b7aa019fd21239e72' was completed in 23.79 seconds with score 968.29 (25 unrouted and 849 violations), using 415.50 CPU seconds and the job allocated 179.21 GB of memory so far.
+2026-11-13 22:54:35.722 WARN   border_intersections: intersection_count (2) is too big!
+2026-11-13 22:54:42.622 WARN   border_intersections: intersection_count (2) is too big!
+2026-11-13 22:54:48.398 WARN   border_intersections: intersection_count (2) is too big!
+2026-11-13 22:54:59.503 INFO   [5B3FA1\6FD273] Auto-routing pass #10 on board '429df928effd9ed0dd8bea924995547a' was completed in 31.44 seconds with score 970.41 (23 unrouted and 849 violations), using 447.08 CPU seconds and the job allocated 194.12 GB of memory so far.
+2026-11-13 22:55:07.350 WARN   border_intersections: intersection_count (2) is too big!
+2026-11-13 22:55:13.606 WARN   border_intersections: intersection_count (2) is too big!
+2026-11-13 22:55:25.238 INFO   [5B3FA1\6FD273] Auto-routing pass #11 on board 'd1ccd47e52266c235771f9a24d4e665f' was completed in 25.22 seconds with score 969.35 (24 unrouted and 849 violations), using 472.91 CPU seconds and the job allocated 205.88 GB of memory so far.
+2026-11-13 22:55:33.251 WARN   border_intersections: intersection_count (2) is too big!
+2026-11-13 22:55:41.736 WARN   border_intersections: intersection_count (2) is too big!
+2026-11-13 22:55:54.058 INFO   [5B3FA1\6FD273] Auto-routing pass #12 on board '9caa05904754061af776456a03bec727' was completed in 28.36 seconds with score 970.41 (23 unrouted and 849 violations), using 500.48 CPU seconds and the job allocated 218.76 GB of memory so far.
+2026-11-13 22:56:01.862 WARN   border_intersections: intersection_count (2) is too big!
+2026-11-13 22:56:11.538 WARN   border_intersections: intersection_count (2) is too big!
+2026-11-13 22:56:24.416 INFO   [5B3FA1\6FD273] Auto-routing pass #13 on board '7d6222bef3ce99e30934bc612cfb55e2' was completed in 29.89 seconds with score 968.29 (25 unrouted and 849 violations), using 531.08 CPU seconds and the job allocated 233.48 GB of memory so far.
+2026-11-13 22:56:45.908 INFO   [5B3FA1\6FD273] Auto-routing pass #14 on board '57b030789ba500518b21eb4b2bedaa2a' was completed in 20.77 seconds with score 969.35 (24 unrouted and 849 violations), using 551.91 CPU seconds and the job allocated 241.92 GB of memory so far.
+2026-11-13 22:56:54.469 WARN   border_intersections: intersection_count (2) is too big!
+2026-11-13 22:57:01.643 WARN   border_intersections: intersection_count (2) is too big!
+2026-11-13 22:57:22.309 INFO   [5B3FA1\6FD273] Auto-routing pass #15 on board '9b6be92583d3c6f3dee07fc9d79026f4' was completed in 35.94 seconds with score 968.29 (25 unrouted and 849 violations), using 588.34 CPU seconds and the job allocated 257.67 GB of memory so far.
+2026-11-13 22:57:30.999 WARN   border_intersections: intersection_count (2) is too big!
+2026-11-13 22:57:40.272 WARN   border_intersections: intersection_count (2) is too big!
+2026-11-13 22:57:57.529 INFO   [5B3FA1\6FD273] Auto-routing pass #16 on board 'd1ccd47e52266c235771f9a24d4e665f' was completed in 0.00 seconds with score 970.41 (23 unrouted and 849 violations), using 622.81 CPU seconds and the job allocated 272.29 GB of memory so far.
+2026-11-13 22:58:05.384 WARN   border_intersections: intersection_count (2) is too big!
+2026-11-13 22:58:12.002 WARN   border_intersections: intersection_count (2) is too big!
+2026-11-13 22:59:02.196 WARN   BasicBoard.normalizeTraces: reached 2000 iterations for net 'CH_P16' — stopping to prevent hang. The board geometry for this net may be oscillating (split/combine cycle); traces are kept as-is and further normalization for this net is suppressed on this board candidate.
+2026-11-13 22:59:03.683 INFO   [5B3FA1\6FD273] Auto-routing pass #17 on board 'd1ccd47e52266c235771f9a24d4e665f' was completed in 65.96 seconds with score 969.35 (24 unrouted and 849 violations), using 687.91 CPU seconds and the job allocated 304.27 GB of memory so far.
+2026-11-13 22:59:10.586 WARN   border_intersections: intersection_count (2) is too big!
+2026-11-13 22:59:24.364 WARN   BasicBoard.normalizeTraces: reached 2000 iterations for net 'CH_A0' — stopping to prevent hang. The board geometry for this net may be oscillating (split/combine cycle); traces are kept as-is and further normalization for this net is suppressed on this board candidate.
+2026-11-13 22:59:27.763 WARN   border_intersections: intersection_count (2) is too big!
+2026-11-13 22:59:41.430 INFO   [5B3FA1\6FD273] Auto-routing pass #18 on board '26f8c3228f71fdcb4b4f9167ddaf6385' was completed in 37.35 seconds with score 970.41 (23 unrouted and 849 violations), using 725.41 CPU seconds and the job allocated 326.10 GB of memory so far.
+2026-11-13 22:59:48.316 WARN   border_intersections: intersection_count (2) is too big!
+2026-11-13 22:59:55.852 WARN   border_intersections: intersection_count (2) is too big!
+2026-11-13 23:00:09.921 INFO   [5B3FA1\6FD273] Auto-routing pass #19 on board 'b4b545ee94b0f2c43ee866066f05c27e' was completed in 28.09 seconds with score 969.35 (24 unrouted and 849 violations), using 753.05 CPU seconds and the job allocated 340.93 GB of memory so far.
+2026-11-13 23:00:16.769 WARN   border_intersections: intersection_count (2) is too big!
+2026-11-13 23:00:24.768 WARN   border_intersections: intersection_count (2) is too big!
+2026-11-13 23:00:39.995 INFO   [5B3FA1\6FD273] Auto-routing pass #20 on board 'e7de5d58e765195e93049df01ff6ea72' was completed in 29.68 seconds with score 970.41 (23 unrouted and 849 violations), using 782.39 CPU seconds and the job allocated 356.49 GB of memory so far.
+2026-11-13 23:00:40.229 INFO   [5B3FA1\6FD273] The router's best score (970.41) has not improved by more than 0.5 points since pass #10. Stopping the auto-router after 20 passes (23 items still unconnected).
+The following connections could not be routed -- please review your design (e.g. check pad clearances, trace width rules, and available routing space):
+  Net 'VL' (2 unrouted connections):
+    - u1-d18714b6c6c415fd12  ->  u1-f800b59a680722ee11
+    - u1-df0d897a10362b7e18  ->  u1-4cb1b705fbbc0dbd15
+  Net 'N17A' (1 unrouted connection):
+    - u1-466329065198543513  ->  u1-3872f16c9c50b78e13
+  Net 'VSEN_VL' (3 unrouted connections):
+    - u1-d57d02606d25154512  ->  u1-1ad26ca6c7dcd0ee17
+    - u1-6bca9191380741c  ->  u1-1ad26ca6c7dcd0ee17
+    - u1-6bca9191380741c  ->  u1-bccb7c71a6db683e49
+  Net 'L_PS' (1 unrouted connection):
+    - u1-2b7b9d64ccf97aa  ->  u1-bdd8679db49684b511
+  Net 'G_MIC_TALLY' (2 unrouted connections):
+    - u1-4e31a21ea18791ae20  ->  u1-0df60b273c52625a20
+    - u1-0df60b273c52625a20  ->  u1-96dd3d7cc47273d2163
+  Net 'G_CPEB' (1 unrouted connection):
+    - u1-3966d311cc2923af25  ->  u1-96dd3d7cc47273d2181
+  Net 'CH_A0' (1 unrouted connection):
+    - u1-47d399c7966f83be11  ->  u1-96dd3d7cc47273d2213
+  Net 'G_ADDR6' (1 unrouted connection):
+    - u1-7f00226e1a24d58e24  ->  u1-96dd3d7cc47273d2215
+  Net 'G_ADDR7' (2 unrouted connections):
+    - u1-8832f377c58d4bb122  ->  u1-8a5d4477c8d4ab6d48
+    - u1-96dd3d7cc47273d2245  ->  u1-7f00226e1a24d58e25
+  Net 'GEN_H' (1 unrouted connection):
+    - u1-f68fc8774178342c11  ->  u1-53549d757fdfaf5e11
+  Net 'DRV_A_MTK' (1 unrouted connection):
+    - u1-d1955666dbad194  ->  via
+  Net 'B2_C' (1 unrouted connection):
+    - u1-f4bf79fe215850a  ->  u1-251bd8819c16ea8e34
+  Net 'DRV_B_INS' (1 unrouted connection):
+    - via  ->  u1-251bd8819c16ea8e32
+  Net 'MA3' (2 unrouted connections):
+    - via  ->  u1-6f3518950557dcd477
+    - u1-218f7cb000ad085  ->  via
+  Net 'IN_C' (1 unrouted connection):
+    - via  ->  u1-64a96479b5b8e19
+  Net 'CH_P16' (2 unrouted connections):
+    - u1-915b9d9c095b00f740  ->  via
+    - u1-89699b923f56fc2  ->  via
+2026-11-13 23:00:41.015 INFO   [5B3FA1\6FD273] Auto-routing stage completed: started with 98 unrouted nets, completed in 795.19 seconds, final score: 970.41 (23 unrouted and 849 violations), using 783.39 total CPU seconds, 356.88 GB total allocated, and 854.6 MB peak heap usage.
+2026-11-13 23:00:41.328 INFO   [5B3FA1\6FD273] Skipping optimization stage: the board has 23 unrouted connection(s) (optimizer only runs on completely routed boards).
+2026-11-13 23:00:41.559 INFO   [5B3FA1\6FD273] Job '5B3FA1\6FD273' finished with state: COMPLETED (elapsed: 13 minutes 16.94 seconds, finished at UTC: 2026-11-13T21:00:41.558450200Z).
+2026-11-13 23:00:41.567 INFO   Saving output file 'C:\Users\theli\Documents\EasyEDA-Pro\projects\VR Channel Bench\pcb\v6_fr.ses' (SES)...
+2026-11-13 23:00:41.574 INFO   Successfully saved output file 'C:\Users\theli\Documents\EasyEDA-Pro\projects\VR Channel Bench\pcb\v6_fr.ses' (589093 bytes).
+
+????????????????????????????????????????????????????????????????????
+?           Thank you for using Freerouting!                       ?
+?                                                                  ?
+?  If you would like to support the project, please visit          ?
+?  https://www.freerouting.app/donate.html                         ?
+?  Every contribution helps keep this project open and active!     ?
+????????????????????????????????????????????????????????????????????
