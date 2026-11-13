@@ -1,0 +1,66 @@
+2026-11-13 18:38:27.870 INFO   Freerouting v2.5.0 (build-date: 2026-10-05)
+2026-11-13 18:38:28.205 INFO   Hardware: 8 CPU cores, 372 CPU score, 12216 MB RAM
+2026-11-13 18:38:28.208 WARN   GUI is disabled and you don't have a console available, so the only feedback from Freerouting is in the log.
+2026-11-13 18:38:29.572 INFO   [51661A\709BF6] Loading board file 'v2_fr3.dsn'...
+2026-11-13 18:38:29.981 INFO   [51661A\709BF6] Job '51661A\709BF6' started at 2026-11-13T16:38:29.980880400Z.
+2026-11-13 18:38:30.357 INFO   [51661A\709BF6] Pipeline thread limits: autorouter pass is single-threaded, optimizer.max_threads=7.
+2026-11-13 18:38:30.574 INFO   [51661A\709BF6] Fanout stage is enabled but skipped because the board has no SMD pins.
+2026-11-13 18:38:30.815 INFO   [51661A\709BF6] Auto-routing stage started on board 'c8e2ea9b5039fa7ca056f270912f387a' with baseline score 183.30 for 741 unrouted items.
+2026-11-13 18:42:53.543 INFO   [51661A\709BF6] Auto-routing pass #1 on board 'c8e2ea9b5039fa7ca056f270912f387a' was completed in 262.61 seconds with score 699.93 (230 unrouted and 0 violations), using 257.64 CPU seconds and the job allocated 121.66 GB of memory so far.
+2026-11-13 18:45:47.453 INFO   [51661A\709BF6] Auto-routing pass #2 on board 'a7fb8a297519311bf08202ddd179908b' was completed in 173.70 seconds with score 799.09 (154 unrouted and 0 violations), using 427.97 CPU seconds and the job allocated 201.18 GB of memory so far.
+2026-11-13 18:49:28.904 INFO   [51661A\709BF6] Auto-routing pass #3 on board 'cb177434129ca667ef8ffb0e00a2e343' was completed in 221.21 seconds with score 898.24 (78 unrouted and 0 violations), using 647.13 CPU seconds and the job allocated 308.45 GB of memory so far.
+2026-11-13 18:52:20.438 INFO   [51661A\709BF6] Auto-routing pass #4 on board '82baddbd5350bfdbc23c43e58f8f18e4' was completed in 171.27 seconds with score 917.81 (63 unrouted and 0 violations), using 815.77 CPU seconds and the job allocated 390.75 GB of memory so far.
+2026-11-13 18:54:45.034 INFO   [51661A\709BF6] Auto-routing pass #5 on board '65f4641957a9389a3950fe5c790da6b1' was completed in 144.30 seconds with score 950.42 (38 unrouted and 0 violations), using 958.77 CPU seconds and the job allocated 461.14 GB of memory so far.
+2026-11-13 18:56:01.360 INFO   [51661A\709BF6] Auto-routing pass #6 on board 'b24978d09dd5bd1946dcb9c7d22ba341' was completed in 76.00 seconds with score 953.03 (36 unrouted and 0 violations), using 1033.59 CPU seconds and the job allocated 496.88 GB of memory so far.
+2026-11-13 18:56:35.995 INFO   [51661A\709BF6] Auto-routing pass #7 on board '131c121a77753f1d7d67ade4f9a5ecb4' was completed in 34.31 seconds with score 972.60 (21 unrouted and 0 violations), using 1067.33 CPU seconds and the job allocated 513.08 GB of memory so far.
+2026-11-13 18:56:51.913 INFO   [51661A\709BF6] Auto-routing pass #8 on board '3cbeacd1818257f5ea2080f38fd70ed8' was completed in 15.59 seconds with score 972.60 (21 unrouted and 0 violations), using 1083.22 CPU seconds and the job allocated 520.26 GB of memory so far.
+2026-11-13 18:57:00.393 INFO   [51661A\709BF6] Auto-routing pass #9 on board '3cbeacd1818257f5ea2080f38fd70ed8' was completed in 8.38 seconds with score 963.47 (28 unrouted and 0 violations), using 1092.00 CPU seconds and the job allocated 524.42 GB of memory so far.
+2026-11-13 18:57:13.200 INFO   [51661A\709BF6] Auto-routing pass #10 on board '980ff9f810d1d7855b90af1736c77c85' was completed in 12.54 seconds with score 975.21 (19 unrouted and 0 violations), using 1104.67 CPU seconds and the job allocated 531.15 GB of memory so far.
+2026-11-13 18:57:24.686 INFO   [51661A\709BF6] Auto-routing pass #11 on board 'add27ea6d9afc615407e5a5552c0ad7a' was completed in 11.23 seconds with score 963.47 (28 unrouted and 0 violations), using 1115.53 CPU seconds and the job allocated 536.95 GB of memory so far.
+2026-11-13 18:57:38.348 INFO   [51661A\709BF6] Auto-routing pass #12 on board 'c83d824f8c9a7ce58d675841786e3ed0' was completed in 13.40 seconds with score 975.21 (19 unrouted and 0 violations), using 1129.28 CPU seconds and the job allocated 543.88 GB of memory so far.
+2026-11-13 18:57:50.080 INFO   [51661A\709BF6] Auto-routing pass #13 on board 'dd6eac1720dbf8421efcd6301c936aec' was completed in 11.46 seconds with score 962.17 (29 unrouted and 0 violations), using 1140.20 CPU seconds and the job allocated 549.79 GB of memory so far.
+2026-11-13 18:58:05.721 INFO   [51661A\709BF6] Auto-routing pass #14 on board '1e5ac10dd8b4dff39ee950982e950a27' was completed in 15.21 seconds with score 975.21 (19 unrouted and 0 violations), using 1155.97 CPU seconds and the job allocated 558.30 GB of memory so far.
+2026-11-13 18:58:11.243 INFO   [51661A\709BF6] Auto-routing pass #15 on board 'd6bab8f666b81d69eea16eb708566b93' was completed in 5.27 seconds with score 963.47 (28 unrouted and 0 violations), using 1161.89 CPU seconds and the job allocated 561.09 GB of memory so far.
+2026-11-13 18:58:18.857 INFO   [51661A\709BF6] Auto-routing pass #16 on board '698081076560d43d15a392cd49665412' was completed in 7.32 seconds with score 975.21 (19 unrouted and 0 violations), using 1168.80 CPU seconds and the job allocated 564.45 GB of memory so far.
+2026-11-13 18:58:24.563 INFO   [51661A\709BF6] Auto-routing pass #17 on board 'f2a51b170681e6fe6251c372f75226b1' was completed in 5.39 seconds with score 963.47 (28 unrouted and 0 violations), using 1174.69 CPU seconds and the job allocated 567.14 GB of memory so far.
+2026-11-13 18:58:32.531 INFO   [51661A\709BF6] Auto-routing pass #18 on board '1e6b2a6382c66d018266217b9119ee81' was completed in 7.71 seconds with score 975.21 (19 unrouted and 0 violations), using 1182.56 CPU seconds and the job allocated 570.88 GB of memory so far.
+2026-11-13 18:58:38.746 INFO   [51661A\709BF6] Auto-routing pass #19 on board 'bb51dbda8798e54c422f9fdd28b3d03d' was completed in 5.96 seconds with score 963.47 (28 unrouted and 0 violations), using 1188.50 CPU seconds and the job allocated 573.55 GB of memory so far.
+2026-11-13 18:58:46.333 INFO   [51661A\709BF6] Auto-routing pass #20 on board '5ca9a1d38c6faf442c3b4808fcca063d' was completed in 7.33 seconds with score 975.21 (19 unrouted and 0 violations), using 1196.47 CPU seconds and the job allocated 577.33 GB of memory so far.
+2026-11-13 18:58:46.439 INFO   [51661A\709BF6] The router's best score (975.21) has not improved by more than 0.5 points since pass #10. Stopping the auto-router after 20 passes (19 items still unconnected).
+The following connections could not be routed -- please review your design (e.g. check pad clearances, trace width rules, and available routing space):
+  Net 'GND' (6 unrouted connections):
+    - u1-770225fd6376c78  ->  conductionarea
+    - u1-ccb84f1782c9089f42  ->  u1-ccb84f1782c9089f72
+    - u1-ccb84f1782c9089f69  ->  u1-ccb84f1782c9089f39
+    - u1-ccb84f1782c9089f69  ->  u1-ccb84f1782c9089f72
+    - u1-4311f98c7c726093  ->  u1-b89221a077ac4ace12
+    - u1-ccb84f1782c9089f69  ->  conductionarea
+  Net 'GNDA' (2 unrouted connections):
+    - conductionarea  ->  conductionarea
+    - conductionarea  ->  conductionarea
+  Net 'VIN24' (9 unrouted connections):
+    - u1-b773bd2ad83691fe7  ->  u1-47aabf189186f3927
+    - u1-386a619e921da6fe7  ->  u1-47aabf189186f3927
+    - u1-70bb410910cec90e14  ->  u1-3872f16c9c50b78e14
+    - conductionarea  ->  u1-fcafb874f75446d972
+    - u1-6a3aa3f56a0da15216  ->  u1-c811ca4a4412ec2e7
+    - u1-28c5799a5a77a39e72  ->  u1-f65c79a5e7e613be72
+    - u1-f099a54c3f1a08be11  ->  u1-68d7add515c20b6e16
+    - u1-6a3aa3f56a0da15216  ->  u1-34cdd6da7df1c48e16
+    - u1-c737909a0f62c77e18  ->  u1-b30a002cf2959a5d41
+  Net 'ADJ_U25' (2 unrouted connections):
+    - u1-39830aab617d67f917  ->  u1-68a6510c001a4afe11
+    - u1-734cd80df899488e12  ->  u1-68a6510c001a4afe11
+2026-11-13 18:58:46.966 INFO   [51661A\709BF6] Auto-routing stage completed: started with 741 unrouted nets, completed in 1216.43 seconds, final score: 975.21 (19 unrouted and 0 violations), using 1196.47 total CPU seconds, 577.33 GB total allocated, and 1280.2 MB peak heap usage.
+2026-11-13 18:58:47.201 INFO   [51661A\709BF6] Skipping optimization stage: the board has 19 unrouted connection(s) (optimizer only runs on completely routed boards).
+2026-11-13 18:58:47.331 INFO   [51661A\709BF6] Job '51661A\709BF6' finished with state: COMPLETED (elapsed: 20 minutes 17.35 seconds, finished at UTC: 2026-11-13T16:58:47.330371800Z).
+2026-11-13 18:58:47.362 INFO   Saving output file 'C:\Users\theli\AppData\Local\Claude-Data\claude_pzs8sxrjxfjjc\scratch-workspaces\53cafcff-36e1-4518-8755-2220720dc6b6\96f2243e-e4dd-468f-9197-c70d98efa94d\scratch-2026-11-13-e7b3d2\pcb\v2_fr3.ses' (SES)...
+2026-11-13 18:58:47.366 INFO   Successfully saved output file 'C:\Users\theli\AppData\Local\Claude-Data\claude_pzs8sxrjxfjjc\scratch-workspaces\53cafcff-36e1-4518-8755-2220720dc6b6\96f2243e-e4dd-468f-9197-c70d98efa94d\scratch-2026-11-13-e7b3d2\pcb\v2_fr3.ses' (337941 bytes).
+
+????????????????????????????????????????????????????????????????????
+?           Thank you for using Freerouting!                       ?
+?                                                                  ?
+?  If you would like to support the project, please visit          ?
+?  https://www.freerouting.app/donate.html                         ?
+?  Every contribution helps keep this project open and active!     ?
+????????????????????????????????????????????????????????????????????

@@ -1,0 +1,10 @@
+ENB0           w12   ok 1 paths  1.0s
+ENA2           w12   ok 1 paths  2.4s
+ENA1           w12   ok 1 paths  13.6s
+ENA0           w12   ok 1 paths  18.4s
+MA3            w12   FAIL 0/2 -> retry FAIL 0/2  79.6s
+MA2            w12   FAIL 0/2 -> retry FAIL 0/2  81.9s
+MA1            w12   FAIL 0/2 -> retry FAIL 0/2  76.9s
+MA0            w12   FAIL 0/2 -> retry FAIL 0/2  72.8s
+ISEN_VL        w12   ok 4 paths  26.8s
+VSENSE         w12   ok 3 paths  8.7s

@@ -1,0 +1,5 @@
+(async()=>{const out={};try{
+out.pages=await eda.dmt_Schematic.getAllSchematicPagesInfo();
+for(const k of ['TSR 1-2490','TSR1-2490','R-78E9.0-0.5','R-78E9.0-1.0','R-78B9.0-1.0','TSR 2-2490','K7809-1000R3','K7809-500R3']){try{const r=await eda.lib_Device.search(k);out[k]=(r||[]).slice(0,6).map(d=>({name:d.name,sup:d.supplierId,mfr:d.manufacturerId,fp:d.footprintName||d.footprint,desc:d.description,lib:d.libraryUuid,uuid:d.uuid}));}catch(e){out[k]='ERR '+e}}
+}catch(e){out.err=''+e}
+const f=new File([JSON.stringify(out)],'vrb_recon1.json',{type:'application/json'});await eda.sys_FileSystem.saveFile(f,'vrb_recon1.json');})();

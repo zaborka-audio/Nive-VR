@@ -1,0 +1,115 @@
+2026-11-13 18:14:44.964 INFO   Freerouting v2.5.0 (build-date: 2026-10-05)
+2026-11-13 18:14:45.316 INFO   Hardware: 8 CPU cores, 348 CPU score, 12216 MB RAM
+2026-11-13 18:14:45.319 WARN   GUI is disabled and you don't have a console available, so the only feedback from Freerouting is in the log.
+2026-11-13 18:14:46.687 INFO   [28FE63\FD6D73] Loading board file 'v2_fr2.dsn'...
+2026-11-13 18:14:47.172 INFO   [28FE63\FD6D73] Job '28FE63\FD6D73' started at 2026-11-13T16:14:47.172277900Z.
+2026-11-13 18:14:47.630 INFO   [28FE63\FD6D73] Pipeline thread limits: autorouter pass is single-threaded, optimizer.max_threads=7.
+2026-11-13 18:14:47.841 INFO   [28FE63\FD6D73] Fanout stage is enabled but skipped because the board has no SMD pins.
+2026-11-13 18:14:48.022 INFO   [28FE63\FD6D73] Auto-routing stage started on board '097f2ad188f77d50963f6eaeddb8198f' with baseline score 147.06 for 795 unrouted items.
+2026-11-13 18:19:38.474 INFO   [28FE63\FD6D73] Auto-routing pass #1 on board '097f2ad188f77d50963f6eaeddb8198f' was completed in 290.29 seconds with score 684.97 (241 unrouted and 0 violations), using 278.56 CPU seconds and the job allocated 130.82 GB of memory so far.
+2026-11-13 18:22:19.422 INFO   [28FE63\FD6D73] Auto-routing pass #2 on board 'd0427b383aa0b9d12705d9fd5390acae' was completed in 160.71 seconds with score 728.10 (208 unrouted and 0 violations), using 435.22 CPU seconds and the job allocated 204.27 GB of memory so far.
+2026-11-13 18:25:23.417 INFO   [28FE63\FD6D73] Auto-routing pass #3 on board 'd9d7b0b11936a1b7c9e0d9f59b7f00d5' was completed in 183.69 seconds with score 843.14 (120 unrouted and 0 violations), using 615.63 CPU seconds and the job allocated 291.47 GB of memory so far.
+2026-11-13 18:27:35.859 INFO   [28FE63\FD6D73] Auto-routing pass #4 on board '0a6d62b97407c5987947952c88df659b' was completed in 132.20 seconds with score 840.52 (122 unrouted and 0 violations), using 745.86 CPU seconds and the job allocated 358.35 GB of memory so far.
+2026-11-13 18:29:38.156 INFO   [28FE63\FD6D73] Auto-routing pass #5 on board '47eaba69e2bfe22e542f5b647258c4da' was completed in 122.03 seconds with score 891.50 (83 unrouted and 0 violations), using 867.23 CPU seconds and the job allocated 420.45 GB of memory so far.
+2026-11-13 18:31:02.191 INFO   [28FE63\FD6D73] Auto-routing pass #6 on board '1615844c779f0708223246414fd5e9a7' was completed in 83.76 seconds with score 869.28 (100 unrouted and 0 violations), using 950.09 CPU seconds and the job allocated 462.58 GB of memory so far.
+2026-11-13 18:32:33.226 INFO   [28FE63\FD6D73] Auto-routing pass #7 on board '8bc445433ad72edbe0cc07763571b713' was completed in 90.76 seconds with score 907.19 (71 unrouted and 0 violations), using 1039.92 CPU seconds and the job allocated 507.74 GB of memory so far.
+2026-11-13 18:33:24.619 INFO   [28FE63\FD6D73] Auto-routing pass #8 on board '5959586bc37b6341a55070758ec5b246' was completed in 51.10 seconds with score 907.19 (71 unrouted and 0 violations), using 1090.63 CPU seconds and the job allocated 531.68 GB of memory so far.
+2026-11-13 18:34:15.316 INFO   [28FE63\FD6D73] Auto-routing pass #9 on board '5959586bc37b6341a55070758ec5b246' was completed in 50.61 seconds with score 886.27 (87 unrouted and 0 violations), using 1141.14 CPU seconds and the job allocated 557.36 GB of memory so far.
+2026-11-13 18:34:52.183 INFO   [28FE63\FD6D73] Auto-routing pass #10 on board 'a3c71ce83093a4f1f1232f6d00c8a2a6' was completed in 36.63 seconds with score 917.65 (63 unrouted and 0 violations), using 1176.94 CPU seconds and the job allocated 575.78 GB of memory so far.
+2026-11-13 18:35:03.046 INFO   [28FE63\FD6D73] Auto-routing pass #11 on board '743f0c5fb1bdd151c46f6aa7286e95a6' was completed in 10.60 seconds with score 890.20 (84 unrouted and 0 violations), using 1187.88 CPU seconds and the job allocated 580.44 GB of memory so far.
+2026-11-13 18:35:17.384 INFO   [28FE63\FD6D73] Auto-routing pass #12 on board '3b7f5a3c0a2644ce874973738e0a117e' was completed in 14.09 seconds with score 918.95 (62 unrouted and 0 violations), using 1202.84 CPU seconds and the job allocated 586.85 GB of memory so far.
+2026-11-13 18:35:27.244 INFO   [28FE63\FD6D73] Auto-routing pass #13 on board '43f957785d6905ff03387c31c96a3bb2' was completed in 9.60 seconds with score 890.20 (84 unrouted and 0 violations), using 1211.84 CPU seconds and the job allocated 590.69 GB of memory so far.
+2026-11-13 18:35:41.202 INFO   [28FE63\FD6D73] Auto-routing pass #14 on board 'b900769861aa47a55639d7c786765027' was completed in 13.71 seconds with score 918.95 (62 unrouted and 0 violations), using 1225.84 CPU seconds and the job allocated 596.76 GB of memory so far.
+2026-11-13 18:35:50.753 INFO   [28FE63\FD6D73] Auto-routing pass #15 on board '1bddeffe6119f8ab33e42b882c098ffb' was completed in 9.31 seconds with score 890.20 (84 unrouted and 0 violations), using 1235.84 CPU seconds and the job allocated 601.09 GB of memory so far.
+2026-11-13 18:36:05.234 INFO   [28FE63\FD6D73] Auto-routing pass #16 on board '43696baf731c4cbf6f2f9bf297595117' was completed in 14.07 seconds with score 918.95 (62 unrouted and 0 violations), using 1249.78 CPU seconds and the job allocated 607.12 GB of memory so far.
+2026-11-13 18:36:15.212 INFO   [28FE63\FD6D73] Auto-routing pass #17 on board 'a3026d4298db60ca62cb4e7fcd69795a' was completed in 9.73 seconds with score 890.20 (84 unrouted and 0 violations), using 1259.70 CPU seconds and the job allocated 611.39 GB of memory so far.
+2026-11-13 18:36:30.546 INFO   [28FE63\FD6D73] Auto-routing pass #18 on board '944085b98b484040fcc222086885ef8b' was completed in 15.07 seconds with score 918.95 (62 unrouted and 0 violations), using 1275.66 CPU seconds and the job allocated 617.91 GB of memory so far.
+2026-11-13 18:36:40.654 INFO   [28FE63\FD6D73] Auto-routing pass #19 on board 'a5232f084e0dd09dbd1b552460a3d424' was completed in 9.86 seconds with score 890.20 (84 unrouted and 0 violations), using 1285.64 CPU seconds and the job allocated 622.16 GB of memory so far.
+2026-11-13 18:36:54.915 INFO   [28FE63\FD6D73] Auto-routing pass #20 on board 'b90baafb9c7dc3f0f240f0346e800085' was completed in 14.02 seconds with score 918.95 (62 unrouted and 0 violations), using 1299.59 CPU seconds and the job allocated 628.18 GB of memory so far.
+2026-11-13 18:37:04.818 INFO   [28FE63\FD6D73] Auto-routing pass #21 on board '0f4c5ab5a0f0eefba8845f07d8f934ab' was completed in 9.66 seconds with score 890.20 (84 unrouted and 0 violations), using 1309.56 CPU seconds and the job allocated 632.41 GB of memory so far.
+2026-11-13 18:37:18.861 INFO   [28FE63\FD6D73] Auto-routing pass #22 on board '01e69a55d895f0012059e901143a82d6' was completed in 13.80 seconds with score 918.95 (62 unrouted and 0 violations), using 1323.53 CPU seconds and the job allocated 638.46 GB of memory so far.
+2026-11-13 18:37:18.962 INFO   [28FE63\FD6D73] The router's best score (918.95) has not improved by more than 0.5 points since pass #12. Stopping the auto-router after 22 passes (62 items still unconnected).
+The following connections could not be routed -- please review your design (e.g. check pad clearances, trace width rules, and available routing space):
+  Net 'GND' (6 unrouted connections):
+    - u1-770225fd6376c78  ->  conductionarea
+    - u1-ccb84f1782c9089f72  ->  u1-ccb84f1782c9089f42
+    - u1-ccb84f1782c9089f69  ->  u1-ccb84f1782c9089f39
+    - u1-ccb84f1782c9089f69  ->  u1-ccb84f1782c9089f72
+    - u1-4311f98c7c726093  ->  u1-b89221a077ac4ace12
+    - u1-ccb84f1782c9089f69  ->  conductionarea
+  Net 'GNDA' (2 unrouted connections):
+    - conductionarea  ->  conductionarea
+    - conductionarea  ->  conductionarea
+  Net 'VIN24' (14 unrouted connections):
+    - u1-b773bd2ad83691fe7  ->  u1-47aabf189186f3927
+    - u1-386a619e921da6fe7  ->  u1-47aabf189186f3927
+    - u1-70bb410910cec90e14  ->  u1-3872f16c9c50b78e14
+    - u1-2cc02f2847778b1241  ->  u1-a6a01d844243b2d141
+    - u1-f739260936af00de41  ->  u1-227d7a526bffa7ee41
+    - u1-c811ca4a4412ec2e7  ->  u1-6a3aa3f56a0da15216
+    - u1-f65c79a5e7e613be72  ->  u1-28c5799a5a77a39e72
+    - u1-3c9fa9618530518e41  ->  u1-b30a002cf2959a5d41
+    - u1-f099a54c3f1a08be11  ->  u1-68d7add515c20b6e16
+    - u1-6a3aa3f56a0da15216  ->  u1-34cdd6da7df1c48e16
+    - u1-53669ca30414264e41  ->  u1-bb8d310002b5d0d541
+    - u1-bb8d310002b5d0d541  ->  u1-fcafb874f75446d972
+    - u1-c737909a0f62c77e18  ->  u1-b30a002cf2959a5d41
+    - u1-495518dd959c8d0e41  ->  u1-df0d897a10362b7e20
+  Net 'ADJ_U25' (2 unrouted connections):
+    - u1-68a6510c001a4afe11  ->  u1-39830aab617d67f917
+    - u1-734cd80df899488e12  ->  u1-68a6510c001a4afe11
+  Net 'VR' (2 unrouted connections):
+    - u1-ccb84f1782c9089f66  ->  u1-ccb84f1782c9089f36
+    - u1-ccb84f1782c9089f36  ->  u1-8020bcfc5a31911e11
+  Net 'VL' (33 unrouted connections):
+    - u1-cffa2f3925d5301e8  ->  u1-000ab99540b5b6ee8
+    - u1-5f1261b3a75da8fe8  ->  u1-38b5f2babc284acc8
+    - u1-f9a89fc503e2c9ce8  ->  u1-84a90d677d2a73708
+    - u1-c708a27a77641a9e12  ->  u1-65b62ad1cd4da6628
+    - u1-bba1cf7c092dd52e51  ->  u1-51cf84b3c079783b8
+    - u1-9358d51857faecde8  ->  u1-7793c1ff2979fb5e51
+    - u1-84a90d677d2a73708  ->  u1-0f21b8bfdc5fbcc99
+    - u1-f9a89fc503e2c9ce8  ->  u1-ff3ab469a5f639998
+    - u1-7793c1ff2979fb5e51  ->  u1-cffa2f3925d5301e8
+    - u1-5f1261b3a75da8fe8  ->  u1-bba1cf7c092dd52e51
+    - u1-308f6186fac4772f8  ->  u1-f78a9367119c3c0e51
+    - u1-ff3ab469a5f639998  ->  u1-5847f724703046398
+    - u1-5ff9cc3f88796a4851  ->  u1-5ff9cc3f88796a4845
+    - u1-4434440ca3d8c1ce8  ->  u1-cffa2f3925d5301e8
+    - u1-5f1261b3a75da8fe8  ->  u1-03802774c5d0a2fd8
+    - u1-4434440ca3d8c1ce8  ->  u1-0e745bc46a69a5de8
+    - u1-308f6186fac4772f8  ->  u1-bba1cf7c092dd52e51
+    - u1-1085d237b240ea2e59  ->  u1-c708a27a77641a9e12
+    - u1-000ab99540b5b6ee8  ->  u1-fb3bcb7c0a08ca1e51
+    - u1-dc52ad781ab773ee51  ->  u1-38b5f2babc284acc8
+    - u1-4cb1b705fbbc0dbd15  ->  u1-f800b59a680722ee11
+    - u1-6c2fd6792eaf689e56  ->  u1-ac7b026e93fe4cde56
+    - u1-922078501c44a9ae12  ->  u1-d18714b6c6c415fd12
+    - u1-c7961cd2efbb035e51  ->  u1-f78a9367119c3c0e51
+    - u1-6b827c9cd440204751  ->  u1-5ff9cc3f88796a4851
+    - u1-6b827c9cd440204751  ->  u1-7793c1ff2979fb5e51
+    - u1-d775ab21abb576b951  ->  u1-dc52ad781ab773ee51
+    - u1-0f21b8bfdc5fbcc99  ->  u1-6c2fd6792eaf689e56
+    - u1-c708a27a77641a9e12  ->  u1-ff3ab469a5f639998
+    - u1-9358d51857faecde8  ->  u1-03802774c5d0a2fd8
+    - u1-4cb1b705fbbc0dbd15  ->  u1-922078501c44a9ae12
+    - u1-df0d897a10362b7e18  ->  u1-4cb1b705fbbc0dbd15
+    - u1-5ff9cc3f88796a4845  ->  u1-f800b59a680722ee11
+  Net 'IN_C' (2 unrouted connections):
+    - u1-787f2c84a570d3ce12  ->  u1-997d02f30249dc9e11
+    - u1-787f2c84a570d3ce12  ->  u1-3da065123daaa9b213
+  Net 'PB_C' (1 unrouted connection):
+    - u1-59f9f1376211e65e12  ->  u1-731bb0334c38770335
+2026-11-13 18:37:19.445 INFO   [28FE63\FD6D73] Auto-routing stage completed: started with 795 unrouted nets, completed in 1351.65 seconds, final score: 918.95 (62 unrouted and 0 violations), using 1324.53 total CPU seconds, 638.83 GB total allocated, and 1455.8 MB peak heap usage.
+2026-11-13 18:37:19.668 INFO   [28FE63\FD6D73] Skipping optimization stage: the board has 62 unrouted connection(s) (optimizer only runs on completely routed boards).
+2026-11-13 18:37:19.775 INFO   [28FE63\FD6D73] Job '28FE63\FD6D73' finished with state: COMPLETED (elapsed: 22 minutes 32.60 seconds, finished at UTC: 2026-11-13T16:37:19.773429600Z).
+2026-11-13 18:37:19.793 INFO   Saving output file 'C:\Users\theli\AppData\Local\Claude-Data\claude_pzs8sxrjxfjjc\scratch-workspaces\53cafcff-36e1-4518-8755-2220720dc6b6\96f2243e-e4dd-468f-9197-c70d98efa94d\scratch-2026-11-13-e7b3d2\pcb\v2_fr2.ses' (SES)...
+2026-11-13 18:37:19.798 INFO   Successfully saved output file 'C:\Users\theli\AppData\Local\Claude-Data\claude_pzs8sxrjxfjjc\scratch-workspaces\53cafcff-36e1-4518-8755-2220720dc6b6\96f2243e-e4dd-468f-9197-c70d98efa94d\scratch-2026-11-13-e7b3d2\pcb\v2_fr2.ses' (340843 bytes).
+
+????????????????????????????????????????????????????????????????????
+?           Thank you for using Freerouting!                       ?
+?                                                                  ?
+?  If you would like to support the project, please visit          ?
+?  https://www.freerouting.app/donate.html                         ?
+?  Every contribution helps keep this project open and active!     ?
+????????????????????????????????????????????????????????????????????

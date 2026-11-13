@@ -1,0 +1,18 @@
+(async()=>{const L=[];try{
+await eda.dmt_EditorControl.openDocument('31a46e959f17d190');await new Promise(r=>setTimeout(r,4000));
+const r=await eda.lib_Device.search('TSR 1-2490');const d=(r||[]).find(x=>x.supplierId==='C53183922');if(!d)throw new Error('no dev');
+const c=await eda.sch_PrimitiveComponent.create(d,300,250,undefined,0,false,true,true);const id=c.getState_PrimitiveId();
+await eda.sch_PrimitiveComponent.modify(id,{designator:'U50'});
+const pins=(await eda.sch_PrimitiveComponent.getAllPinsByPrimitiveId(id)).map(p=>({n:String(p.getState_PinNumber()),name:p.getState_PinName(),x:Math.round(p.getState_X()),y:Math.round(p.getState_Y()),r:((p.getState_Rotation()%360)+360)%360}));
+L.push(['pins',pins]);
+const DXY={0:[1,0],90:[0,1],180:[-1,0],270:[0,-1]};
+const FR={Power:{90:0,270:180,180:90,0:270},Ground:{270:0,90:180,0:90,180:270}};
+for(const q of pins){const nm=String(q.name).toUpperCase();const dd=DXY[q.r]||[1,0];
+ if(nm.includes('GND')||q.n==='2'){const e={x:q.x+dd[0]*20,y:q.y+dd[1]*20};await eda.sch_PrimitiveWire.create([q.x,q.y,e.x,e.y],'');await eda.sch_PrimitiveComponent.createNetFlag('Ground','GND',e.x,e.y,FR.Ground[q.r]||0,false);L.push(['gnd',q,e]);}
+ else if(nm.includes('IN')||q.n==='1'){const e={x:q.x+dd[0]*20,y:q.y+dd[1]*20};await eda.sch_PrimitiveWire.create([q.x,q.y,e.x,e.y],'');await eda.sch_PrimitiveComponent.createNetFlag('Power','VIN24',e.x,e.y,FR.Power[q.r]||0,false);L.push(['vin',q,e]);}
+ else {const e={x:q.x+dd[0]*60,y:q.y+dd[1]*60};await eda.sch_PrimitiveWire.create([q.x,q.y,e.x,e.y],'NUC_VIN');L.push(['out',q,e]);}
+}
+await eda.sch_PrimitiveWire.create([530,865,500,865],'NUC_VIN');
+try{await eda.sch_PrimitiveText.create(230,320,'Nucleo VIN: 24V -> 9V (TSR 1-2490), CN8-15',0,'#1F3A93',null,9,false,false,false,1);}catch(e){L.push('text '+e)}
+}catch(e){L.push('ERR '+e)}
+const f=new File([JSON.stringify(L)],'vrb_schvin.json',{type:'application/json'});await eda.sys_FileSystem.saveFile(f,'vrb_schvin.json');})();

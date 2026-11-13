@@ -1,0 +1,11 @@
+raster done
+ENB0 ok 1 paths
+ENA2 ok 2 paths
+ENA1 ok 2 paths
+ENA0 ok 1 paths
+MA3 ok 1 paths
+MA2 ok 1 paths
+MA1 FAIL after 1/2
+MA0 FAIL after 1/2
+ISEN_VL FAIL after 1/2
+VSENSE FAIL after 1/2
