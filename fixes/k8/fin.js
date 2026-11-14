@@ -1,0 +1,3 @@
+(async()=>{const O={err:[]};try{const r=await eda.pcb_Drc.check(false,false,true);O.items=[];const walk=x=>{if(Array.isArray(x))x.forEach(walk);else if(x&&typeof x==='object'){if(x.errorType)O.items.push(JSON.parse(JSON.stringify(x)));for(const k in x)if(typeof x[k]==='object')walk(x[k])}};walk(r);O.n=O.items.length;
+const t=await (await eda.pcb_ManufactureData.getDsnFile()).text();await eda.sys_FileSystem.saveFile(new File([t],'vrb_v17.dsn',{type:'text/plain'}),'vrb_v17.dsn');}catch(e){O.err.push(''+e)}
+await eda.sys_FileSystem.saveFile(new File([JSON.stringify(O)],'vrb_drc13.json',{type:'application/json'}),'vrb_drc13.json');})();

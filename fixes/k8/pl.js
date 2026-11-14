@@ -1,0 +1,9 @@
+(async()=>{const O={log:[],err:[]};const P={"C103": [2000, -6650, 0], "R198": [1875, -6775, 180], "C104": [3400, -6625, 0], "R199": [3375, -6750, 180], "R200": [4025, -8350, 0], "F7": [4275, -8025, 90], "D26": [6375, -3050, 0], "D27": [5575, -2725, 0], "D28": [5325, -3100, 180], "D29": [5050, -3100, 90], "F6": [4800, -600, 0], "R201": [11000, -5850, 180], "R202": [10875, -5975, 180], "R203": [10750, -6100, 180], "R204": [10625, -6225, 180], "R205": [10700, -6375, 180], "R206": [10775, -6625, 180], "R207": [12250, -4375, 90], "R208": [12075, -4475, 90], "R209": [11850, -4475, 90], "R210": [11725, -4250, 90], "R211": [10825, -4300, 90], "R212": [12375, -3800, 90], "R213": [10500, -4450, 90]};const SEG=[["N17L", 3446, -6343, 3487, -6384], ["N17L", 3487, -6384, 3487, -6399], ["N17A", 2137, -6399, 2137, -6415], ["N17A", 2137, -6415, 2098, -6453], ["N17A", 2238, -6293, 2137, -6394]];
+try{for(const c of await eda.pcb_PrimitiveComponent.getAll()){const d=c.getState_Designator();if(P[d]){const v=P[d];await eda.pcb_PrimitiveComponent.modify(c.getState_PrimitiveId(),{x:v[0],y:v[1],rotation:v[2]});O.log.push(d)}}
+ const m=(a,b)=>Math.abs(a[0]-b[0])<3&&Math.abs(a[1]-b[1])<3;const del=[];
+ for(const l of await eda.pcb_PrimitiveLine.getAll()){const n=l.getState_Net();const s=[l.getState_StartX(),l.getState_StartY()],e=[l.getState_EndX(),l.getState_EndY()];
+  for(const g of SEG){if(g[0]!==n)continue;const A=[g[1],g[2]],B=[g[3],g[4]];if((m(s,A)&&m(e,B))||(m(s,B)&&m(e,A)))del.push(l.getState_PrimitiveId())}}
+ if(del.length)await eda.pcb_PrimitiveLine.delete(del);O.log.push('del '+del.length);
+ const t=await (await eda.pcb_ManufactureData.getDsnFile()).text();await eda.sys_FileSystem.saveFile(new File([t],'vrb_v14.dsn',{type:'text/plain'}),'vrb_v14.dsn');
+}catch(e){O.err.push(''+e)}
+await eda.sys_FileSystem.saveFile(new File([JSON.stringify(O)],'vrb_k8pl.json',{type:'application/json'}),'vrb_k8pl.json');})();

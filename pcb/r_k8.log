@@ -1,0 +1,36 @@
+ONOFF_U21      w12   ok 2 paths  0.2s
+ONOFF_U22      w12   ok 2 paths  0.2s
+N17A           w32   ok 2 paths  4.4s
+N17L           w32   ok 1 paths  0.9s
+VIN24          w30   ok 2 paths  4.9s
+PH48           w24   ok 4 paths  0.7s
+PH48_R         w24   ok 1 paths  0.1s
+PH48_F         w24   ok 1 paths  0.6s
+MICX_H         w12   ok 2 paths  0.4s
+MICX_C         w12   ok 2 paths  0.4s
++16V           w24   ok 2 paths  2.5s
+-16V           w24   ok 2 paths  2.3s
+VECAM_K        w16   ok 1 paths  0.2s
+VECAM          w16   FAIL 0/2 -> retry FAIL 0/2 -> w12 FAIL 0/2  2.1s
+L_A0           w12   ok 1 paths  0.2s
+L_A1           w12   ok 1 paths  0.3s
+L_A2           w12   ok 1 paths  0.3s
+L_A3           w12   ok 1 paths  0.3s
+L_A4           w12   ok 1 paths  0.3s
+L_A5           w12   ok 1 paths  0.5s
++3V3           w16   ok 5 paths  2.6s
+CH_A0_D        w12   ok 2 paths  0.2s
+CH_A1_D        w12   ok 2 paths  0.3s
+CH_A2_D        w12   ok 2 paths  0.3s
+CH_A3_D        w12   ok 2 paths  0.4s
+CH_A4_D        w12   ok 2 paths  0.4s
+CH_A5_D        w12   ok 2 paths  0.4s
+CH_SEL_D       w12   ok 2 paths  7.0s
+CH_A0          w12   FAIL 0/2 -> retry FAIL 0/2  1.6s
+CH_A1          w12   ok 1 paths  0.5s
+CH_A2          w12   ok 1 paths  0.9s
+CH_A3          w12   FAIL 0/2 -> retry FAIL 0/2  1.3s
+CH_A4          w12   ok 1 paths  0.7s
+CH_A5          w12   FAIL 0/2 -> retry FAIL 0/2  1.3s
+CH_SEL         w12   FAIL 0/2 -> retry FAIL 0/2  2.0s
+DONE 44s

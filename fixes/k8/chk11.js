@@ -1,0 +1,4 @@
+(async()=>{const O={c:[]};await eda.dmt_EditorControl.openDocument('2d391c71882bed56');await new Promise(r=>setTimeout(r,3000));
+for(const id of await eda.sch_PrimitiveComponent.getAllPrimitiveId()){const c=await eda.sch_PrimitiveComponent.get(id);if(c.getState_ComponentType()!=='part')continue;const d=c.getState_Designator()||'';if(/^RN|\?/.test(d)||(c.getState_X()<120))O.c.push([id,d,c.getState_X(),c.getState_Y(),(c.getState_Component()||{}).name])}
+O.lib=[];try{const r=await Promise.race([eda.lib_Device.get('ea5250f502484d68bdcf0794854f79be','0819f05c4eef4c71ace90d822a990e87'),new Promise((_,j)=>setTimeout(()=>j('to'),30000))]);O.lib.push(r&&r.name)}catch(e){O.lib.push('ERR '+e)}
+await eda.sys_FileSystem.saveFile(new File([JSON.stringify(O)],'vrb_chk11.json',{type:'application/json'}),'vrb_chk11.json');})();

@@ -1,0 +1,7 @@
+(async()=>{const S=[[11218.09, -513.0900000000001, 11433.57, -513.0900000000001], [11433.57, -513.0900000000001, 11489.69, -569.2099999999991], [11489.69, -569.2099999999991, 11489.69, -609.4099999999999], [11489.69, -609.4099999999999, 11489.69, -622.2800000000007], [11489.69, -622.2800000000007, 11641.13, -773.7199999999993], [11641.13, -773.7199999999993, 11641.13, -842.4599999999991], [11641.13, -842.4599999999991, 12011.53, -1212.8600000000006], [12011.53, -1212.8600000000006, 12059.31, -1212.8600000000006], [12059.31, -1212.8600000000006, 12380.3, -1533.8500000000004], [12380.3, -1533.8500000000004, 12380.3, -4272.0]],V=[];const m=(a,b)=>Math.abs(a[0]-b[0])<2&&Math.abs(a[1]-b[1])<2;const D=[];
+for(const l of await eda.pcb_PrimitiveLine.getAll()){if(l.getState_Net()!=='CH_A1')continue;const s=[l.getState_StartX(),l.getState_StartY()],e=[l.getState_EndX(),l.getState_EndY()];
+ for(const g of S){const A=[g[0],g[1]],B=[g[2],g[3]];if((m(s,A)&&m(e,B))||(m(s,B)&&m(e,A))){D.push(l.getState_PrimitiveId());break}}}
+if(D.length)await eda.pcb_PrimitiveLine.delete(D);const DV=[];
+for(const v of await eda.pcb_PrimitiveVia.getAll()){if(v.getState_Net()!=='CH_A1')continue;if(V.some(q=>m(q,[v.getState_X(),v.getState_Y()])))DV.push(v.getState_PrimitiveId())}
+if(DV.length)await eda.pcb_PrimitiveVia.delete(DV);
+await eda.sys_FileSystem.saveFile(new File([JSON.stringify({l:D.length,v:DV.length})],'vrb_k8del.json',{type:'application/json'}),'vrb_k8del.json');})();

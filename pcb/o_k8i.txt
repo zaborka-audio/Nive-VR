@@ -1,0 +1,4 @@
+CH_A1 12
+CH_A2 12
+CH_A4 12
+CH_SEL 8
