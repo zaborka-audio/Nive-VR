@@ -1,0 +1,3 @@
+(async()=>{const O={comps:[]};for(const c of await eda.pcb_PrimitiveComponent.getAll()){const id=c.getState_PrimitiveId();let fp='';try{fp=(c.getState_Footprint()||{}).name}catch(e){}
+O.comps.push({des:c.getState_Designator(),x:Math.round(c.getState_X()),y:Math.round(c.getState_Y()),r:c.getState_Rotation(),fp,pads:(await eda.pcb_PrimitiveComponent.getAllPinsByPrimitiveId(id)).map(p=>[p.getState_PadNumber(),p.getState_Net(),Math.round(p.getState_X()),Math.round(p.getState_Y())])})}
+await eda.sys_FileSystem.saveFile(new File([JSON.stringify(O)],'vrb_pcb_src3.json',{type:'application/json'}),'vrb_pcb_src3.json');})();
