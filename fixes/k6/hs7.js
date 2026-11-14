@@ -1,0 +1,4 @@
+(async()=>{const O={};const l=await eda.pcb_PrimitiveLine.get('d5dd4e9fd0eb11cb');O.l=[l.getState_Net(),l.getState_Layer(),l.getState_StartX(),l.getState_StartY(),l.getState_EndX(),l.getState_EndY(),l.getState_LineWidth()];
+O.vr=[];for(const x of await eda.pcb_PrimitiveLine.getAll()){if(x.getState_Net()==='VR')O.vr.push([x.getState_PrimitiveId(),x.getState_Layer(),x.getState_StartX(),x.getState_StartY(),x.getState_EndX(),x.getState_EndY(),x.getState_LineWidth()])}
+for(const c of await eda.pcb_PrimitiveComponent.getAll()){if(c.getState_Designator()==='HS7'){O.hs=[c.getState_X(),c.getState_Y(),(await eda.pcb_PrimitiveComponent.getAllPinsByPrimitiveId(c.getState_PrimitiveId())).map(p=>{const r={};for(const k of Object.getOwnPropertyNames(Object.getPrototypeOf(p)))if(k.startsWith('getState_'))try{r[k.slice(9)]=p[k]()}catch(e){};return r})]}}
+await eda.sys_FileSystem.saveFile(new File([JSON.stringify(O)],'vrb_hs7.json',{type:'application/json'}),'vrb_hs7.json');})();
