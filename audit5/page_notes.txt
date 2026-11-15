@@ -1,0 +1,138 @@
+== P3 Controller
+NUCLEO-F767ZI  (ST Zio sockets, board plugs in from above)
+CN10 socket pads are numbered 1-17 / 18-34 (U-shape); nets follow ST Zio CN10 numbering.
+RELAY DRIVERS  ULN2803A  (open collector, internal flyback diodes to VIN24)
+Nucleo VIN: 24V -> 9V (TSR 1-2490), CN8-15
+
+== P12 Recall ADC
+RECALL DATA -> ADC:  L_ADC = 3.0 V + 0.2 x (CH_DATA - CH_REF)   (OPA2277 on +/-19 V so inputs reach -15 V)
+U45: input buffers (1M keeps DATA defined when no channel is fitted)
+U46A: difference amp, gain 0.2, offset VREF3B.  BAT85 clamp to 0 / 3.3 V, 4.7k limits fault current.
+REFERENCE  3.0 V  (TL431, 2.495 V x 1.2)  and buffer
+SUPPLY DECOUPLING  and CH_REF link
+JP4: CH_REF to 0 V
+
+== P9 Logic line network
+LOGIC LINES  22k from the CD4094 outputs, 220k idle to 0 V;  line -> J1 and CD4021 input
+RN1-RN10 4608X-102: resistors are pins 1-2, 3-4, 5-6, 7-8 (labels arranged for that; symbol drawing is generic)
+
+== P11 Level shifters
+LEVEL SHIFTERS  LM339 (+5 V / VL), open collector, pulled up to 0 V = logic 1 of the channel
+U44 B-D unused: inputs tied, outputs open
+THRESHOLDS  (VTH = 1.65 V,  VTHN = -7.5 V)  and boot defaults
+L_SEL idles high (deselected), L_OE idles low (registers off)
+DECOUPLING AND BULK
+100 nF per LM339 on +5 V and VL;  C bulk on VL, +5 V, +3V3
+
+== P13 Channel power
+CHANNEL SUPPLY SWITCH  K23/K24 G2RL-2 24 V (8 A), coils from U3 ch.6 (DRV_PWR)
+NC contacts unused: channel supplies are off until the firmware sets CTL_PWR.
+K24 second pole switches VECAM (+12 V via JP3).  K25 (coil parallel to K23/K24) switches VR -> F5 MF-R020 0.2 A -> CH_VR.  F6 MF-R020 (0.2 A) in VECAM.
+PTC FUSES (0.75 A hold) AND 0.1 R SHUNTS  ->  CH_P16 / CH_N16 / CH_VL to J2
++16 rail
+-16 rail
+VL rail
+CURRENT SENSE  (I = V(Rout) x Rg / (Rs x Rout): +16 V 1 A = 3.0 V;  -16 V 1 A = 3.0 V down from 3.0 V;  VL 0.5 A = 2.55 V down)  Bases via 10k, 1N4148 across B-E (D23-D25).
+VOLTAGE SENSE  (to ADC)  and indicator
+
+== P1 Power input
+24 V DC INPUT - fuse, TVS, reverse-polarity P-FET  (PSU 24 V >= 4 A; F1 3 A hold; TVS D1 after Q1)
+Q1 conducts only with correct polarity; D2 clamps Vgs to 15 V.
+GND/GNDA TIE, 24 V MONITOR
+Single tie point
+to Nucleo ADC (PC2)
+U20  LM2576HV  BUCK  24 V -> P17 (+19.7 V)
+C40 at U20 VIN
+U21  LM2576HV  INVERTING  24 V -> N17A (-19.7 V)
+U22  LM2576HV  INVERTING  24 V -> N17L (-19.7 V)
+U30  LM2577  BOOST  24 V -> HV50 (+50 V)
++48 V PHANTOM SUPPLY (capacitance multiplier)
+PH48 is switched to the mic pins by K12 (sheet P4).
+
+== P2 Linear regulators
+U23  LM317  P17 -> +16 V   (heatsink HS4)
+Vout = 1.25 V x (1 + 2.87k / 240) = 16.2 V
+U25  LM337  N17A -> -16 V   (heatsink HS5)
+U27  LM337  N17L -> VL (-15 V logic)   (heatsink HS6)
+U28  LM337  N17L -> VR (-15 V recall)   (heatsink HS7)
+U29  L7812CV (TO-220)  P17 -> P12 (+12 V relay / VECAM)
+JP3: link P12 -> VECAM (channel +12 V)
+SUPPLY INDICATORS
+D6  +16 V
+D7  -16 V
+D8  VL
+HEATSINKS (mechanical, isolated from each other)
+HS1-HS3 on U20-U22 (LM2576).  LM337 tab = input: heatsinks must not touch.
+
+== P7 Channel connectors
+TO CHANNEL:  J1 = back connector 1 (DIN 41612 C, 96),  J2 = back connector 2 (DIN 41612, 64)
+J1, J2 sit on the underside of the Main board, front edge; the Bus board (J3, J4) is stacked above.
+JP2  TEST HEADER
+1  OSC/TB in
+2  OSC/TB 0 V
+3  PFL out
+4  FE9A
+5  FE9C
+6-7  LIMITER LOOP (link fitted)
+8  GNDA
+J12  TO BUS BOARD  (2x20, 2.54 mm socket)
+Mates with J13 (pins) on the Bus board, 11 mm stack.
+
+== P4 Input routing
+INPUT RELAYS  TQ2-24V  (coil 1-10, contacts 3/4/2 and 8/7/9 = COM/NO/NC)
+MIC PADS  (balanced, 0.1 %)  and termination
+-40 dB pad
+-60 dB pad
+150R mic termination
+MIC COUPLING (bipolar, phantom-proof)  and phantom bleed
+R10: PH_BLEED discharge
+
+== P6 Bus summing
+U9A  BUS A  HOT leg  (inverting summer, out -> SUMA_C)
+U9B  BUS A  COLD leg  (out -> SUMA_H)
+U15A  BUS B  HOT leg  (out -> SUMB_C)
+U15B  BUS B  COLD leg  (out -> SUMB_H)
+SUPPLY DECOUPLING
+U9
+U15
+Mux outputs arrive from the Bus board (J12) at the virtual-earth nodes SUMx_HN / SUMx_CN.
+Legs are crossed at the outputs (R19/R20, R23/R24) so the inverting stage keeps bus polarity.
+
+== P5 Output routing
+OUTPUT RELAYS  TQ2-24V  (A side: K13-K16, K21;  B side: K17-K20, K22)
+MEASUREMENT PADS  -14 dB  (0.1 %)
+Pad A (K21)
+Pad B (K22)
+AUDIO INTERFACE  (XLR, pin 1 = GNDA, shell = GNDA)
+J5 OUT1 -> generator   J6 OUT2   J7 <- A (meas.)   J8 <- B (meas.)
+
+== P8 Logic outputs
+LOGIC OUTPUTS  CD4094 x5  (serial in, VDD = 0 V, VSS = VL -15 V, levels as in the channel)
+U31 lines 0-7
+U32 lines 8-15
+U33 lines 16-23
+U34 lines 24-31
+U35 lines 32-39
+DECOUPLING  (one 100 nF per package, at the supply pins)
+U31
+U32
+U33
+U34
+U35
+Chain: SDI4 -> U31 DATA, Q'S (pin 10, changes on falling CLK) -> next DATA.  CLK4 / STB4 / OE4 from the level shifters (P11).  Outputs LDRV_n -> P9.
+
+== P10 Logic inputs
+LOGIC INPUTS  CD4021 x5  (parallel in, serial out QOUT -> U44 -> L_MISO)
+U36 lines 0-7
+U37 lines 8-15
+U38 lines 16-23
+U39 lines 24-31
+U40 lines 32-39
+DECOUPLING  (one 100 nF per package, at the supply pins)
+U36
+U37
+U38
+U39
+U40
+Chain: Q8 -> next SI.  PS4 = load, CLK4 = shift.  Inputs read the channel lines directly (after the 22k, see P9).
+
