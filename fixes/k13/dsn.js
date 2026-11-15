@@ -1,0 +1,1 @@
+(async()=>{try{const t=await (await eda.pcb_ManufactureData.getDsnFile()).text();await eda.sys_FileSystem.saveFile(new File([t],'vrb_v24.dsn',{type:'text/plain'}),'vrb_v24.dsn');}catch(e){await eda.sys_FileSystem.saveFile(new File([''+e],'vrb_v24err.txt',{type:'text/plain'}),'vrb_v24err.txt')}})();
