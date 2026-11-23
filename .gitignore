@@ -3,3 +3,7 @@ orig/
 __pycache__/
 *.pyc
 _tmp_*
+
+# Neve manual scans and page crops: private reference, not for the repo
+audit6/book1/
+audit6/work/img/
