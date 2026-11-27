@@ -1,0 +1,101 @@
+﻿
+Compressor static curve, threshold 0.0 dBu, ratio pot 0.20 (nominal 2.00:1)
+  in  -20.0 dBu  out  -20.00 dBu  GR  0.00 dB
+  in  -15.0 dBu  out  -15.00 dBu  GR -0.00 dB
+  in  -10.0 dBu  out  -10.00 dBu  GR  0.00 dB
+  in   -5.0 dBu  out   -5.00 dBu  GR -0.00 dB
+  in   +0.0 dBu  out   -0.00 dBu  GR  0.00 dB
+  in   +5.0 dBu  out   +2.50 dBu  GR  2.50 dB
+  in  +10.0 dBu  out   +5.00 dBu  GR  5.00 dB
+  in  +15.0 dBu  out   +7.50 dBu  GR  7.50 dB
+  in  +20.0 dBu  out  +10.00 dBu  GR 10.00 dB
+PASS  ratio 2.000692 vs panel 2.000000
+PASS  unity gain below threshold
+
+Compressor static curve, threshold 0.0 dBu, ratio pot 0.50 (nominal 3.00:1)
+  in  -20.0 dBu  out  -20.00 dBu  GR  0.00 dB
+  in  -15.0 dBu  out  -15.00 dBu  GR -0.00 dB
+  in  -10.0 dBu  out  -10.00 dBu  GR  0.00 dB
+  in   -5.0 dBu  out   -5.00 dBu  GR -0.00 dB
+  in   +0.0 dBu  out   -0.00 dBu  GR  0.00 dB
+  in   +5.0 dBu  out   +1.67 dBu  GR  3.33 dB
+  in  +10.0 dBu  out   +3.33 dBu  GR  6.67 dB
+  in  +15.0 dBu  out   +5.00 dBu  GR 10.00 dB
+  in  +20.0 dBu  out   +6.66 dBu  GR 13.34 dB
+PASS  ratio 3.002076 vs panel 3.000000
+PASS  unity gain below threshold
+
+Compressor static curve, threshold 0.0 dBu, ratio pot 0.80 (nominal 5.00:1)
+  in  -20.0 dBu  out  -20.00 dBu  GR  0.00 dB
+  in  -15.0 dBu  out  -15.00 dBu  GR -0.00 dB
+  in  -10.0 dBu  out  -10.00 dBu  GR  0.00 dB
+  in   -5.0 dBu  out   -5.00 dBu  GR -0.00 dB
+  in   +0.0 dBu  out   -0.00 dBu  GR  0.00 dB
+  in   +5.0 dBu  out   +1.00 dBu  GR  4.00 dB
+  in  +10.0 dBu  out   +2.00 dBu  GR  8.00 dB
+  in  +15.0 dBu  out   +3.00 dBu  GR 12.00 dB
+  in  +20.0 dBu  out   +3.99 dBu  GR 16.01 dB
+PASS  ratio 5.006923 vs panel 5.000000
+PASS  unity gain below threshold
+PASS  make-up 15 dB at mid travel
+
+Attack (normal fast loop), 30 dB step: final gain -19.98 dB, 50% after 1 ms, 90% after 18 ms
+PASS  fast loop takes the transient
+PASS  main loop settles (7 ms time constant on programme peaks)
+
+Attack (pulled fast loop), 30 dB step: final gain -19.98 dB, 50% after 0 ms, 90% after 18 ms
+PASS  fast loop takes the transient
+PASS  main loop settles (7 ms time constant on programme peaks)
+Release pot 0.00 (panel 0.030 s): GR 20.0 dB, 63% recovery after 59 ms
+PASS  release time follows panel
+Release pot 0.39 (panel 0.300 s): GR 20.0 dB, 63% recovery after 319 ms
+PASS  release time follows panel
+Release pot 0.78 (panel 3.000 s): GR 20.0 dB, 63% recovery after 2234 ms
+PASS  release time follows panel
+AUTO release: after 20 ms burst 145 ms, after 2 s programme 201 ms
+PASS  auto release is programme dependent (longer after sustained signal)
+Signal drop to -60 dBu: GR 20.0 -> after 1 s 18.6 dB
+PASS  release frozen when signal falls 20 dB below threshold
+
+Gate: threshold 0.0 dBu, range 40 dB, hysteresis 5 dB, release 0.30 s
+  in  -20.0 dBu  out  -60.35 dBu
+  in   -5.0 dBu  out  -45.35 dBu
+  in   +2.0 dBu  out  -38.35 dBu
+  in  +10.0 dBu  out  +10.00 dBu
+PASS  gate open above threshold+hysteresis
+PASS  gate closed attenuates by RANGE
+PASS  hysteresis: open gate stays open at +2 dB
+PASS  hysteresis: closed gate stays closed at +2 dB
+Gate attack: 25 dB opened after 1 ms
+PASS  gate attack ~1 ms / 25 dB
+
+Expander (HYST at EXP), threshold 0.0 dBu
+  in  +10.0 dBu  out  +10.00 dBu
+  in   +0.0 dBu  out   -0.00 dBu
+  in   -5.0 dBu  out  -11.68 dBu
+  in  -10.0 dBu  out  -23.37 dBu
+  in  -15.0 dBu  out  -35.05 dBu
+  in  -20.0 dBu  out  -46.74 dBu
+  expansion slope 2.34 (1:2.34)
+PASS  expander about 1:2.3
+
+Gate release (time from open to 25 dB, RANGE 50 dB)
+  REL pot 0.00: 0.030 s (circuit 0.030 s)
+PASS  gate release time per 25 dB follows RV6b network
+  REL pot 0.25: 0.159 s (circuit 0.160 s)
+PASS  gate release time per 25 dB follows RV6b network
+  REL pot 0.50: 0.299 s (circuit 0.300 s)
+PASS  gate release time per 25 dB follows RV6b network
+  REL pot 0.75: 0.475 s (circuit 0.476 s)
+PASS  gate release time per 25 dB follows RV6b network
+  REL pot 1.00: 2.988 s (circuit 2.990 s)
+PASS  gate release time per 25 dB follows RV6b network
+PASS  INV: signal above threshold ducked by RANGE
+PASS  INV: below threshold passes
+  ducker REL pot 0.00: before -10.0  during key -30.2  0.3 s after key -10.0 dBu
+  ducker REL pot 1.00: before -10.0  during key -30.2  0.3 s after key -27.9 dBu
+PASS  ducker: programme ducked by RANGE while the key is present
+PASS  ducker: short release recovers at once
+PASS  ducker: long release recovers slowly (3 s / 25 dB)
+
+ALL PASS (0 failures)

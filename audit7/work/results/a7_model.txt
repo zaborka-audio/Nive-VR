@@ -1,0 +1,74 @@
+﻿== steady-state gain ripple of the model (GR max-min over the last second of a 12 s tone, thr 0 dBu, +10 dBu in, ratio lim, 48 kHz)
+      50 Hz REL 0.00: gain -10.003 .. -10.003 dB (pp 0.0000)
+      50 Hz REL 0.39: gain -10.003 .. -10.003 dB (pp 0.0000)
+     100 Hz REL 0.00: gain -10.003 .. -10.003 dB (pp 0.0000)
+     100 Hz REL 0.39: gain -10.003 .. -10.003 dB (pp 0.0000)
+    1000 Hz REL 0.00: gain -10.003 .. -10.003 dB (pp 0.0000)
+    1000 Hz REL 0.39: gain -10.003 .. -10.003 dB (pp 0.0000)
+     997 Hz REL 0.00: gain -10.003 .. -10.003 dB (pp 0.0000)
+     997 Hz REL 0.39: gain -10.003 .. -10.003 dB (pp 0.0000)
+    3000 Hz REL 0.00: gain -10.003 .. -10.003 dB (pp 0.0000)
+    3000 Hz REL 0.39: gain -10.003 .. -10.003 dB (pp 0.0000)
+   10000 Hz REL 0.00: gain -10.003 .. -10.003 dB (pp 0.0000)
+   10000 Hz REL 0.39: gain -10.003 .. -10.003 dB (pp 0.0000)
+== expander ripple (HYST=EXP, 10 dB below thr, range 50, REL 0.0), per-sample GR over the last 0.5 s
+     60 Hz: GR 13.368 .. 14.962 dB (pp 1.594), excursions in 0.5 s: 15
+    200 Hz: GR 13.368 .. 14.282 dB (pp 0.914), excursions in 0.5 s: 16
+   1000 Hz: GR 13.368 .. 13.508 dB (pp 0.140), excursions in 0.5 s: 16
+
+== sample-rate dependence: steady GR of the limiter for a tone 10 dB over threshold (ideal continuous-time answer 10.00 dB)
+  fs  44100:  1000 Hz: 10.00..10.00 |  5000 Hz: 10.00..10.00 | 10000 Hz: 10.00..10.00 | 11025 Hz:  7.00..10.00 | 12000 Hz: 10.00..10.00 | 14700 Hz:  8.75..10.00 | 16000 Hz: 10.00..10.00 | 19000 Hz: 10.00..10.00 |
+  fs  48000:  1000 Hz:  9.99..10.00 |  5000 Hz:  9.99..10.00 | 10000 Hz:  9.99..10.00 | 11025 Hz: 10.00..10.00 | 12000 Hz:  7.00..10.00 | 14700 Hz: 10.00..10.00 | 16000 Hz:  8.75..10.00 | 19000 Hz:  9.99..10.00 |
+  fs  96000:  1000 Hz: 10.00..10.00 |  5000 Hz: 10.00..10.00 | 10000 Hz:  9.99..10.00 | 11025 Hz: 10.00..10.00 | 12000 Hz:  9.64..10.00 | 14700 Hz: 10.00..10.00 | 16000 Hz:  8.75..10.00 | 19000 Hz: 10.00..10.00 |
+  fs 192000:  1000 Hz: 10.00..10.00 |  5000 Hz: 10.00..10.00 | 10000 Hz: 10.00..10.00 | 11025 Hz: 10.00..10.00 | 12000 Hz:  9.86..10.00 | 14700 Hz: 10.00..10.00 | 16000 Hz:  9.70..10.00 | 19000 Hz: 10.00..10.00 |
+== attack/release vs sample rate (0 -> +20 dBu step, ratio lim, REL 0.39): time to 90 % GR and time from drop to 10 %
+  fs  44100: attack 90% 18.66 ms, release to 10% 668.7 ms
+  fs  48000: attack 90% 18.67 ms, release to 10% 668.6 ms
+  fs  96000: attack 90% 18.67 ms, release to 10% 668.6 ms
+  fs 192000: attack 90% 18.67 ms, release to 10% 668.6 ms
+
+== non-finite input
+  one NaN sample at t=1 s: output rms in the 3rd second 0.001209 (input rms 0.125893), non-finite outputs 0, comp vMain 0, gate vPeak 0.492839
+  one +inf sample at t=1 s: output rms in the 3rd second 0.000000 (input rms 0.125893), non-finite outputs 0, comp vMain inf, gate vPeak inf
+  one 1e30 sample at t=1 s: output rms in the 3rd second 0.125893 (input rms 0.125893), non-finite outputs 0, comp vMain 0, gate vPeak 0.492839
+  EQ (FourBandDSP) with one NaN input sample: 1 non-finite output samples, last output 0.0862434
+
+== mono (nc = 1, LINK on): GR 8.00 dB, meters ch0 8.00 ch1 0.00
+
+== aliasing of the gain modulation: two tones 9.1 kHz + 10.3 kHz, each +4 dBu (thr 0 dBu), ratio lim, FAST, REL 0.0
+  fs  48000: fundamental -21.0 dBFS; true IMD lines (re fund): 7.9k -126.3, 6.7k -131.4, 5.5k -134.4, 4.3k -136.7, 3.1k -138.3 dB; alias lines (48k images): 8.9k -113.0, 6.5k -132.0, 4.1k -136.9, 2.9k -138.7, 0.5k -139.5 dB
+  fs 192000: fundamental -21.0 dBFS; true IMD lines (re fund): 7.9k -131.2, 6.7k -137.1, 5.5k -141.2, 4.3k -144.8, 3.1k -148.6 dB; alias lines (48k images): 8.9k -118.3, 6.5k -138.7, 4.1k -145.9, 2.9k -149.4, 0.5k -156.2 dB
+
+== CPU cost (single thread, stereo)
+  dynamics normal, block 512: 236.2 ns per stereo frame, 1.13 % of real time at 48 kHz (4.53 % at 192 kHz)
+  dynamics AUTO, block 512: 273.3 ns per stereo frame, 1.31 % of real time at 48 kHz (5.25 % at 192 kHz)
+  dynamics normal, block 1: 271.3 ns per stereo frame, 1.30 % of real time at 48 kHz (5.21 % at 192 kHz)
+  EQ FourBandDSP: 1136.8 ns per stereo frame, 5.46 % of real time at 48 kHz (21.83 % at 192 kHz)
+
+== EQ (FourBandDSP as used by the channel plugin): magnitude response in dB
+  freq Hz:                               20      50     100     200     500    1000    2000    5000   10000   15000   20000 
+  fs  44100 flat                    -0.00   -0.00   -0.00   -0.00   -0.00   -0.01   -0.01   -0.00   +0.05   +0.19     --  
+  fs  48000 flat                    -0.00   -0.00   -0.00   -0.00   -0.00   -0.01   -0.01   -0.00   +0.04   +0.16   +0.31 
+  fs  96000 flat                    -0.00   -0.00   -0.00   -0.00   -0.00   -0.01   -0.01   -0.00   +0.04   +0.10   +0.18 
+  fs 192000 flat                    -0.00   -0.00   -0.00   -0.00   -0.00   -0.01   -0.01   -0.00   +0.03   +0.09   +0.15 
+  fs  48000 LF +max bell            +5.87  +13.30  +17.94  +16.61   +9.55   +4.75   +1.69   +0.23   +0.03   +0.10   +0.25 
+  fs  48000 LF -max bell            -5.93  -13.36  -17.96  -16.59   -9.56   -4.76   -1.71   -0.24   +0.06   +0.23   +0.38 
+  fs  48000 LF +max shelf          +19.21  +19.25  +17.76  +10.51   +0.84   -0.05   -0.05   -0.03   +0.02   +0.14   +0.29 
+  fs  48000 HF +max bell            -0.14   -0.18   -0.07   +0.37   +2.64   +6.57  +11.93  +18.19  +14.44   +8.64   +1.09 
+  fs  48000 HF +max shelf           -0.03   -0.07   -0.09   -0.10   -0.12   +0.02   +2.71  +14.81  +18.23  +18.17  +16.58 
+  fs  48000 HF +max, freq max       -0.03   -0.06   -0.07   -0.05   +0.05   +0.42   +1.66   +6.27  +12.62  +17.32  +13.71 
+  fs  48000 HMF +max, Q pot 1       -0.00   +0.00   +0.00   +0.01   +0.08   +0.38   +3.03   +1.46   +0.15   +0.13   +0.25 
+  fs  48000 LMF -max, Q pot 0       -0.56   -2.67   -6.37  -11.28  -16.77  -16.78  -12.86   -6.09   -1.87   -0.23   +0.49 
+  fs  96000 LF +max bell            +5.87  +13.30  +17.94  +16.61   +9.56   +4.76   +1.70   +0.25   +0.04   +0.05   +0.12 
+  fs  96000 LF -max bell            -5.93  -13.36  -17.96  -16.59   -9.56   -4.77   -1.72   -0.26   +0.04   +0.15   +0.24 
+  fs  96000 LF +max shelf          +19.21  +19.25  +17.76  +10.51   +0.85   -0.05   -0.05   -0.03   +0.01   +0.08   +0.16 
+  fs  96000 HF +max bell            -0.14   -0.18   -0.06   +0.41   +2.81   +6.83  +12.20  +18.21  +15.13  +11.27   +8.08 
+  fs  96000 HF +max shelf           -0.03   -0.07   -0.09   -0.10   -0.12   +0.05   +3.02  +14.91  +18.17  +18.28  +18.14 
+  fs  96000 HF +max, freq max       -0.05   -0.07   -0.06   -0.02   +0.29   +1.24   +3.78  +10.08  +15.92  +17.64  +16.30 
+  fs  96000 HMF +max, Q pot 1       -0.00   +0.00   +0.00   +0.01   +0.08   +0.39   +3.09   +1.56   +0.20   +0.11   +0.15 
+  fs  96000 LMF -max, Q pot 0       -0.56   -2.67   -6.37  -11.28  -16.77  -16.78  -12.88   -6.27   -2.33   -0.88   -0.18 
+  fs  22050 flat                    -0.00   -0.00   -0.00   -0.00   -0.00   -0.01   -0.01   -0.00     --      --      --  
+  fs  22050 HF +max, freq max        NaN     NaN     NaN     NaN     NaN     NaN     NaN     NaN      --      --      --  
+  fs  32000 flat                    -0.00   -0.00   -0.00   -0.00   -0.00   -0.01   -0.01   -0.00   +0.07     --      --  
+  fs  32000 HF +max, freq max        NaN     NaN     NaN     NaN     NaN     NaN     NaN     NaN     NaN      --      --  
+  band centre frequencies (model): LF 32..124..372 Hz  LMF 184..708..2133 Hz  HMF 756..2904..8745 Hz  HF 1512..5807..17490 Hz  

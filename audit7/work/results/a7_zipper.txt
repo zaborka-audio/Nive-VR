@@ -1,0 +1,3 @@
+﻿make-up automated 0 -> 15 dB in 1 s, host block   64: gain step 0.020 dB every 1.3 ms, error (stepped vs smooth) -57.6 dB relative to the signal
+make-up automated 0 -> 15 dB in 1 s, host block  512: gain step 0.160 dB every 10.7 ms, error (stepped vs smooth) -39.6 dB relative to the signal
+make-up automated 0 -> 15 dB in 1 s, host block 2048: gain step 0.640 dB every 42.7 ms, error (stepped vs smooth) -27.7 dB relative to the signal

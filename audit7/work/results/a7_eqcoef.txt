@@ -1,0 +1,5 @@
+﻿band 0: 10 capacitor states, one coefficient set 15.0 us (x3 modes per update)
+band 1: 3 capacitor states, one coefficient set 11.4 us (x1 modes per update)
+band 2: 4 capacitor states, one coefficient set 12.6 us (x1 modes per update)
+band 3: 12 capacitor states, one coefficient set 16.2 us (x3 modes per update)
+sizeof(lf::Coefficients) = 1360 bytes, sizeof(lf::Network) = 13320 bytes (stack)

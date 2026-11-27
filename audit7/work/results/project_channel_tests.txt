@@ -1,0 +1,9 @@
+﻿flat EQ, dynamics out: 0 dBu in -> -0.01 dBu out
+PASS  flat channel is close to unity
+6 kHz +4 dBu, HF boost: EQ in path +18.97, EQ in side chain (DYN) -13.62, DYN with flat EQ +0.80 dBu
+PASS  DYN: HF boost in the side chain compresses HF harder (de-esser)
+PASS  DYN: the EQ boost is no longer in the programme path
+200 Hz +4 dBu: DYN with HF boost +0.51, flat +0.80 dBu
+PASS  DYN: low frequencies are unaffected by an HF side-chain boost
+
+ALL PASS (0 failures)

@@ -1,0 +1,4 @@
+﻿timer resolution default: 100 idle EQ instances (400 worker threads): prepare 31 ms total, idle CPU 19.92 % of one core
+  destroying 100 instances: 6077 ms
+timer resolution 1 ms (timeBeginPeriod): 100 idle EQ instances (400 worker threads): prepare 37 ms total, idle CPU 5.08 % of one core
+  destroying 100 instances: 629 ms
